@@ -1,0 +1,4497 @@
+Model {
+  Name			  "GSM_Blocks"
+  Version		  6.0
+  GraphicalInterface {
+    NumRootInports	    0
+    NumRootOutports	    0
+    ParameterArgumentNames  ""
+    ComputedModelVersion    "1.138"
+    NumModelReferences	    0
+    NumTestPointedSignals   0
+  }
+  SavedCharacterEncoding  "ibm-5348_P100-1997"
+  SaveDefaultBlockParams  on
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  on
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName	  "covCumulativeData"
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  DataTypeOverride	  "UseLocalSettings"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Sun Apr 09 16:20:33 2006"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "Simón"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Fri Apr 14 15:48:26 2006"
+  ModelVersionFormat	  "1.%<AutoIncrement:138>"
+  ConfigurationManager	  "None"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  BufferReuse		  on
+  ProdHWDeviceType	  "32-bit Generic"
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      1
+      Version		      "1.0.4"
+      Array {
+	Type			"Handle"
+	Dimension		7
+	Simulink.SolverCC {
+	  $ObjectID		  2
+	  Version		  "1.0.4"
+	  StartTime		  "0.0"
+	  StopTime		  "7"
+	  AbsTol		  "auto"
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  Solver		  "VariableStepDiscrete"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  RateTranMode		  "Deterministic"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  3
+	  Version		  "1.0.4"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveFormat		  "Array"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SaveTime		  on
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  4
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    5
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "InitFltsAndDblsToZero"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    PropName		    "DisabledProps"
+	  }
+	  Version		  "1.0.4"
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  ConditionalExecOptimization "on_for_testing"
+	  InlineParams		  off
+	  InlineInvariantSignals  on
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnforceIntegerDowncast  on
+	  ExpressionFolding	  on
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  ParameterPooling	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  on
+	  NoFixptDivByZeroProtection off
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  5
+	  Version		  "1.0.4"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  CheckSSInitialOutputMsg on
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "TryResolveAllWithWarning"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterPrecisionLossMsg "warning"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "none"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  ModelReferenceSimTargetVerbose off
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  6
+	  Version		  "1.0.4"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  7
+	  Version		  "1.0.4"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  8
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    1
+	    Cell		    "IncludeHyperlinkInReport"
+	    PropName		    "DisabledProps"
+	  }
+	  Version		  "1.0.4"
+	  SystemTargetFile	  "grt.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  TemplateMakefile	  "grt_default_tmf"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ConfigAtBuild		  off
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      9
+	      Array {
+		Type			"Cell"
+		Dimension		9
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"InsertBlockDesc"
+		Cell			"SFDataObjDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		PropName		"DisabledProps"
+	      }
+	      Version		      "1.0.4"
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      IncDataTypeInIds	      off
+	      PrefixModelToSubsysFcnNames on
+	      CustomSymbolStr	      "$R$N$M"
+	      MangleLength	      1
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      SimulinkBlockComments   on
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      10
+	      Array {
+		Type			"Cell"
+		Dimension		12
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"MultiInstanceERTCode"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportNonFinite"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		PropName		"DisabledProps"
+	      }
+	      Version		      "1.0.4"
+	      TargetFcnLib	      "ansi_tfl_tmw.mat"
+	      GenFloatMathFcnCalls    "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      IncludeMdlTerminateFcn  on
+	      CombineOutputUpdateFcns off
+	      SuppressErrorStatus     off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      SimulationMode	      "normal"
+      CurrentDlgPage	      "Solver"
+    }
+    PropName		    "ConfigurationSets"
+  }
+  Simulink.ConfigSet {
+    $PropName		    "ActiveConfigurationSet"
+    $ObjectID		    1
+  }
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Assignment
+      InputType		      "Vector"
+      IndexMode		      "One-based"
+      IndexIsStartValue	      off
+      ElementSrc	      "Internal"
+      Elements		      "1"
+      RowSrc		      "Internal"
+      Rows		      "1"
+      ColumnSrc		      "Internal"
+      Columns		      "1"
+      OutputDimensions	      "[1 1]"
+      DiagnosticForDimensions "None"
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      OutDataTypeMode	      "Inherit from 'Constant value'"
+      OutDataType	      "sfix(16)"
+      ConRadixGroup	      "Use specified scaling"
+      OutScaling	      "2^0"
+      SampleTime	      "inf"
+    }
+    Block {
+      BlockType		      DataTypeConversion
+      OutDataTypeMode	      "Inherit via back propagation"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      ConvertRealWorld	      "Real World Value (RWV)"
+      RndMeth		      "Zero"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Demux
+      Outputs		      "4"
+      DisplayOption	      "none"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      DigitalClock
+      SampleTime	      "1"
+    }
+    Block {
+      BlockType		      Display
+      Format		      "short"
+      Decimation	      "10"
+      Floating		      off
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      ForIterator
+      ResetStates	      "held"
+      IterationSource	      "internal"
+      IterationLimit	      "5"
+      ExternalIncrement	      off
+      ShowIterationPort	      on
+      IndexMode		      "One-based"
+      IterationVariableDataType	"int32"
+    }
+    Block {
+      BlockType		      FrameConversion
+      OutFrame		      "Frame based"
+    }
+    Block {
+      BlockType		      Ground
+    }
+    Block {
+      BlockType		      Inport
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Logic
+      Operator		      "AND"
+      Inputs		      "2"
+      AllPortsSameDT	      on
+      OutDataTypeMode	      "Logical (see Configuration Parameters: Optimiza"
+"tion)"
+      LogicDataType	      "uint(8)"
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      MATLABFcn
+      MATLABFcn		      "sin"
+      OutputDimensions	      "-1"
+      OutputSignalType	      "auto"
+      Output1D		      on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      MultiPortSwitch
+      Inputs		      "4"
+      zeroidx		      off
+      InputSameDT	      on
+      OutDataTypeMode	      "Inherit via internal rule"
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      RelationalOperator
+      Operator		      ">="
+      InputSameDT	      on
+      LogicOutDataTypeMode    "Logical (see Configuration Parameters: Optimiza"
+"tion)"
+      LogicDataType	      "uint(8)"
+      ZeroCross		      on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      "S-Function"
+      FunctionName	      "system"
+      PortCounts	      "[]"
+      SFunctionModules	      "''"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      on
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+    Block {
+      BlockType		      Terminator
+    }
+    Block {
+      BlockType		      TriggerPort
+      TriggerType	      "rising"
+      StatesWhenEnabling      "inherit"
+      ShowOutputPort	      off
+      OutputDataType	      "auto"
+      SampleTimeType	      "triggered"
+      SampleTime	      "1"
+      ZeroCross		      on
+    }
+    Block {
+      BlockType		      UnitDelay
+      X0		      "0"
+      SampleTime	      "1"
+      StateMustResolveToSignalObject off
+      RTWStateStorageClass    "Auto"
+    }
+    Block {
+      BlockType		      Width
+      OutputDataTypeScalingMode	"Choose intrinsic data type"
+      DataType		      "double"
+    }
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "GSM_Blocks"
+    Location		    [221, 123, 1134, 794]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      SubSystem
+      Name		      "."
+      Ports		      [1, 1]
+      Position		      [275, 467, 565, 623]
+      Orientation	      "left"
+      BackgroundColor	      "[0.756863, 1.000000, 0.701961]"
+      FontName		      "Arial"
+      FontSize		      20
+      FontWeight	      "bold"
+      TreatAsAtomicUnit	      off
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      MaskDisplay	      "disp('Receptor')"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      System {
+	Name			"."
+	Location		[258, 530, 995, 729]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "In1"
+	  Position		  [15, 98, 45, 112]
+	  Port			  "1"
+	  IconDisplay		  "Port number"
+	  LatchInput		  off
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Decoder"
+	  Ports			  [1, 1]
+	  Position		  [400, 40, 645, 170]
+	  BackgroundColor	  "[0.474510, 0.784314, 0.992157]"
+	  FontName		  "Arial"
+	  FontSize		  18
+	  FontWeight		  "bold"
+	  TreatAsAtomicUnit	  off
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  MaskDisplay		  "disp('Decodificacion')"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  System {
+	    Name		    "Decoder"
+	    Location		    [98, 275, 1157, 624]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In1"
+	      Position		      [15, 78, 45, 92]
+	      Port		      "1"
+	      IconDisplay	      "Port number"
+	      LatchInput	      off
+	    }
+	    Block {
+	      BlockType		      MATLABFcn
+	      Name		      "Bits Clase 1\n+ CRC (185)"
+	      Position		      [385, 70, 435, 100]
+	      MATLABFcn		      "u(1:378)"
+	      OutputDimensions	      "[378,1]"
+	      Output1D		      off
+	    }
+	    Block {
+	      BlockType		      MATLABFcn
+	      Name		      "Bits Clase 1a\n+ CRC (53)"
+	      Position		      [685, 70, 735, 100]
+	      MATLABFcn		      "u(1:53)"
+	      OutputDimensions	      "[53,1]"
+	      Output1D		      off
+	    }
+	    Block {
+	      BlockType		      MATLABFcn
+	      Name		      "Bits Clase 1b\n(132)"
+	      Position		      [755, 205, 805, 235]
+	      MATLABFcn		      "u(54:185)"
+	      OutputDimensions	      "[132,1]"
+	      Output1D		      off
+	    }
+	    Block {
+	      BlockType		      MATLABFcn
+	      Name		      "Bits Clase 2\n(78)"
+	      Position		      [600, 280, 650, 310]
+	      MATLABFcn		      "u(379:456)"
+	      OutputDimensions	      "[78,1]"
+	      Output1D		      off
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Decodificador\nViterbi"
+	      Ports		      [1, 1]
+	      Position		      [480, 55, 600, 115]
+	      SourceBlock	      "commcnvcod2/Viterbi Decoder"
+	      SourceType	      "Viterbi Decoder"
+	      trellis		      "poly2trellis(7, [133 171])"
+	      dectype		      "Hard Decision"
+	      nsdecb		      "4"
+	      tbdepth		      "10"
+	      opmode		      "Truncated"
+	      reset		      off
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Desentrelazado"
+	      Ports		      [1, 1]
+	      Position		      [220, 54, 295, 116]
+	      TreatAsAtomicUnit	      off
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      System {
+		Name			"Desentrelazado"
+		Location		[156, 538, 534, 679]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "In1"
+		  Position		  [15, 68, 45, 82]
+		  Port			  "1"
+		  IconDisplay		  "Port number"
+		  LatchInput		  off
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Des-entrelazado"
+		  Ports			  [1, 1]
+		  Position		  [185, 48, 265, 102]
+		  SourceBlock		  "commblkintrlv2/Matrix\nDeinterleave"
+"r"
+		  SourceType		  "Matrix Deinterleaver"
+		  ShowPortLabels	  on
+		  Nrows			  "57"
+		  Ncols			  "8"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Reshape"
+		  Ports			  [1, 1]
+		  Position		  [95, 64, 125, 86]
+		  SourceBlock		  "simulink/Math\nOperations/Reshape"
+		  SourceType		  "Reshape"
+		  OutputDimensionality	  "Column vector"
+		  OutputDimensions	  "[1,1]"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Out1"
+		  Position		  [325, 68, 355, 82]
+		  IconDisplay		  "Port number"
+		  BusOutputAsStruct	  off
+		}
+		Line {
+		  SrcBlock		  "In1"
+		  SrcPort		  1
+		  DstBlock		  "Reshape"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Des-entrelazado"
+		  SrcPort		  1
+		  DstBlock		  "Out1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Reshape"
+		  SrcPort		  1
+		  DstBlock		  "Des-entrelazado"
+		  DstPort		  1
+		}
+		Annotation {
+		  Name			  "Desentrelazado"
+		  Position		  [192, 21]
+		  FontName		  "Arial"
+		  FontSize		  20
+		  FontWeight		  "bold"
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Detector\nde CRC"
+	      Ports		      [1, 2]
+	      Position		      [780, 58, 870, 107]
+	      SourceBlock	      "commcrc2/General CRC\nSyndrome\nDetecto"
+"r"
+	      SourceType	      "General CRC Syndrome Detector"
+	      genPoly		      "[1 1 0 1]"
+	      iniStates		      "[0]"
+	      numChecksums	      "1"
+	    }
+	    Block {
+	      BlockType		      Display
+	      Name		      "Error"
+	      Ports		      [1]
+	      Position		      [750, 145, 840, 175]
+	      Orientation	      "left"
+	      Decimation	      "1"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Matrix\nConcatenation1"
+	      Ports		      [3, 1]
+	      Position		      [925, 199, 980, 241]
+	      SourceBlock	      "simulink/Math\nOperations/Matrix\nConca"
+"tenation"
+	      SourceType	      "Matrix Concatenation"
+	      numInports	      "3"
+	      catMethod		      "Vertical"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Separación\nRafagas"
+	      Ports		      [1, 1]
+	      Position		      [110, 54, 175, 116]
+	      TreatAsAtomicUnit	      off
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      System {
+		Name			"Separación\nRafagas"
+		Location		[79, 88, 1167, 828]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "In1"
+		  Position		  [15, 368, 45, 382]
+		  Port			  "1"
+		  IconDisplay		  "Port number"
+		  LatchInput		  off
+		}
+		Block {
+		  BlockType		  MATLABFcn
+		  Name			  "Bits Encriptados  2\n+ SF2"
+		  Position		  [545, 175, 595, 205]
+		  MATLABFcn		  "u(88:145)"
+		  OutputDimensions	  "[58,1]"
+		  Output1D		  off
+		}
+		Block {
+		  BlockType		  MATLABFcn
+		  Name			  "Bits Encriptados  4\n+ SF2"
+		  Position		  [545, 335, 595, 365]
+		  MATLABFcn		  "u(88:145)"
+		  OutputDimensions	  "[58,1]"
+		  Output1D		  off
+		}
+		Block {
+		  BlockType		  MATLABFcn
+		  Name			  "Bits Encriptados  6\n+ SF2"
+		  Position		  [545, 495, 595, 525]
+		  MATLABFcn		  "u(88:145)"
+		  OutputDimensions	  "[58,1]"
+		  Output1D		  off
+		}
+		Block {
+		  BlockType		  MATLABFcn
+		  Name			  "Bits Encriptados  8\n+ SF2"
+		  Position		  [545, 655, 595, 685]
+		  MATLABFcn		  "u(88:145)"
+		  OutputDimensions	  "[58,1]"
+		  Output1D		  off
+		}
+		Block {
+		  BlockType		  MATLABFcn
+		  Name			  "Bits Encriptados 1"
+		  Position		  [750, 94, 805, 126]
+		  MATLABFcn		  "u(4:60)"
+		  OutputDimensions	  "[57,1]"
+		  Output1D		  off
+		}
+		Block {
+		  BlockType		  MATLABFcn
+		  Name			  "Bits Encriptados 1\n+ Tail Bits"
+		  Position		  [645, 94, 700, 126]
+		  MATLABFcn		  "u(1:60)"
+		  OutputDimensions	  "[60,1]"
+		  Output1D		  off
+		}
+		Block {
+		  BlockType		  MATLABFcn
+		  Name			  "Bits Encriptados 1\n+ Tail Bits + S"
+"F1"
+		  Position		  [540, 95, 590, 125]
+		  MATLABFcn		  "u(1:61)"
+		  OutputDimensions	  "[61,1]"
+		  Output1D		  off
+		}
+		Block {
+		  BlockType		  MATLABFcn
+		  Name			  "Bits Encriptados 1\n+ Tail Bits + S"
+"F4"
+		  Position		  [540, 575, 590, 605]
+		  ShowName		  off
+		  MATLABFcn		  "u(1:61)"
+		  OutputDimensions	  "[61,1]"
+		  Output1D		  off
+		}
+		Block {
+		  BlockType		  MATLABFcn
+		  Name			  "Bits Encriptados 1 +\nTail Bits + S"
+"F1 + Training"
+		  Position		  [420, 95, 470, 125]
+		  MATLABFcn		  "u(1:87)"
+		  OutputDimensions	  "[87,1]"
+		  Output1D		  off
+		}
+		Block {
+		  BlockType		  MATLABFcn
+		  Name			  "Bits Encriptados 2"
+		  Position		  [750, 174, 805, 206]
+		  MATLABFcn		  "u(2:58)"
+		  OutputDimensions	  "[57,1]"
+		  Output1D		  off
+		}
+		Block {
+		  BlockType		  MATLABFcn
+		  Name			  "Bits Encriptados 3"
+		  Position		  [750, 254, 805, 286]
+		  MATLABFcn		  "u(4:60)"
+		  OutputDimensions	  "[57,1]"
+		  Output1D		  off
+		}
+		Block {
+		  BlockType		  MATLABFcn
+		  Name			  "Bits Encriptados 3\n+ Tail Bits"
+		  Position		  [645, 254, 700, 286]
+		  MATLABFcn		  "u(1:60)"
+		  OutputDimensions	  "[60,1]"
+		  Output1D		  off
+		}
+		Block {
+		  BlockType		  MATLABFcn
+		  Name			  "Bits Encriptados 3\n+ Tail Bits + S"
+"F1"
+		  Position		  [540, 255, 590, 285]
+		  MATLABFcn		  "u(1:61)"
+		  OutputDimensions	  "[61,1]"
+		  Output1D		  off
+		}
+		Block {
+		  BlockType		  MATLABFcn
+		  Name			  "Bits Encriptados 3 +\nTail Bits + S"
+"F1 + Training1"
+		  Position		  [420, 255, 470, 285]
+		  MATLABFcn		  "u(1:87)"
+		  OutputDimensions	  "[87,1]"
+		  Output1D		  off
+		}
+		Block {
+		  BlockType		  MATLABFcn
+		  Name			  "Bits Encriptados 4"
+		  Position		  [750, 334, 805, 366]
+		  MATLABFcn		  "u(2:58)"
+		  OutputDimensions	  "[57,1]"
+		  Output1D		  off
+		}
+		Block {
+		  BlockType		  MATLABFcn
+		  Name			  "Bits Encriptados 5"
+		  Position		  [750, 414, 805, 446]
+		  MATLABFcn		  "u(4:60)"
+		  OutputDimensions	  "[57,1]"
+		  Output1D		  off
+		}
+		Block {
+		  BlockType		  MATLABFcn
+		  Name			  "Bits Encriptados 5\n+ Tail Bits"
+		  Position		  [645, 414, 700, 446]
+		  MATLABFcn		  "u(1:60)"
+		  OutputDimensions	  "[60,1]"
+		  Output1D		  off
+		}
+		Block {
+		  BlockType		  MATLABFcn
+		  Name			  "Bits Encriptados 5\n+ Tail Bits + S"
+"F1"
+		  Position		  [540, 415, 590, 445]
+		  MATLABFcn		  "u(1:61)"
+		  OutputDimensions	  "[61,1]"
+		  Output1D		  off
+		}
+		Block {
+		  BlockType		  MATLABFcn
+		  Name			  "Bits Encriptados 5 +\nTail Bits + S"
+"F1 + Training2"
+		  Position		  [420, 415, 470, 445]
+		  MATLABFcn		  "u(1:87)"
+		  OutputDimensions	  "[87,1]"
+		  Output1D		  off
+		}
+		Block {
+		  BlockType		  MATLABFcn
+		  Name			  "Bits Encriptados 6"
+		  Position		  [750, 494, 805, 526]
+		  MATLABFcn		  "u(2:58)"
+		  OutputDimensions	  "[57,1]"
+		  Output1D		  off
+		}
+		Block {
+		  BlockType		  MATLABFcn
+		  Name			  "Bits Encriptados 7"
+		  Position		  [750, 574, 805, 606]
+		  MATLABFcn		  "u(4:60)"
+		  OutputDimensions	  "[57,1]"
+		  Output1D		  off
+		}
+		Block {
+		  BlockType		  MATLABFcn
+		  Name			  "Bits Encriptados 7\n+ Tail Bits"
+		  Position		  [645, 574, 700, 606]
+		  MATLABFcn		  "u(1:60)"
+		  OutputDimensions	  "[60,1]"
+		  Output1D		  off
+		}
+		Block {
+		  BlockType		  MATLABFcn
+		  Name			  "Bits Encriptados 7 +\nTail Bits + S"
+"F1 + Training"
+		  Position		  [420, 575, 470, 605]
+		  MATLABFcn		  "u(1:87)"
+		  OutputDimensions	  "[87,1]"
+		  Output1D		  off
+		}
+		Block {
+		  BlockType		  MATLABFcn
+		  Name			  "Bits Encriptados 8"
+		  Position		  [750, 654, 805, 686]
+		  MATLABFcn		  "u(2:58)"
+		  OutputDimensions	  "[57,1]"
+		  Output1D		  off
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Concatenación\nde Matriz5"
+		  Ports			  [8, 1]
+		  Position		  [885, 76, 940, 704]
+		  SourceBlock		  "simulink/Math\nOperations/Matrix\nC"
+"oncatenation"
+		  SourceType		  "Matrix Concatenation"
+		  numInports		  "8"
+		  catMethod		  "Vertical"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Reshape1"
+		  Ports			  [1, 1]
+		  Position		  [965, 379, 1010, 401]
+		  SourceBlock		  "simulink/Math\nOperations/Reshape"
+		  SourceType		  "Reshape"
+		  OutputDimensionality	  "Customize"
+		  OutputDimensions	  "[57,8]"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Reshape5"
+		  Ports			  [1, 1]
+		  Position		  [80, 364, 125, 386]
+		  SourceBlock		  "simulink/Math\nOperations/Reshape"
+		  SourceType		  "Reshape"
+		  OutputDimensionality	  "Column vector"
+		  OutputDimensions	  "[157,4]"
+		}
+		Block {
+		  BlockType		  MATLABFcn
+		  Name			  "Trama 1"
+		  Position		  [205, 135, 255, 165]
+		  MATLABFcn		  "u(1:157)"
+		  OutputDimensions	  "[157,1]"
+		  Output1D		  off
+		}
+		Block {
+		  BlockType		  MATLABFcn
+		  Name			  "Trama 2"
+		  Position		  [205, 295, 255, 325]
+		  MATLABFcn		  "u(158:314)"
+		  OutputDimensions	  "[157,1]"
+		  Output1D		  off
+		}
+		Block {
+		  BlockType		  MATLABFcn
+		  Name			  "Trama 3"
+		  Position		  [205, 455, 255, 485]
+		  MATLABFcn		  "u(315:471)"
+		  OutputDimensions	  "[157,1]"
+		  Output1D		  off
+		}
+		Block {
+		  BlockType		  MATLABFcn
+		  Name			  "Trama 4"
+		  Position		  [205, 615, 255, 645]
+		  MATLABFcn		  "u(472:628)"
+		  OutputDimensions	  "[157,1]"
+		  Output1D		  off
+		}
+		Block {
+		  BlockType		  MATLABFcn
+		  Name			  "Trama1 -\n(Tail + Guard Bits)"
+		  Position		  [300, 135, 350, 165]
+		  MATLABFcn		  "u(1:145)"
+		  OutputDimensions	  "[145,1]"
+		  Output1D		  off
+		}
+		Block {
+		  BlockType		  MATLABFcn
+		  Name			  "Trama2 -\n(Tail + Guard Bits)"
+		  Position		  [300, 295, 350, 325]
+		  MATLABFcn		  "u(1:145)"
+		  OutputDimensions	  "[145,1]"
+		  Output1D		  off
+		}
+		Block {
+		  BlockType		  MATLABFcn
+		  Name			  "Trama3 -\n(Tail + Guard Bits)"
+		  Position		  [300, 455, 350, 485]
+		  MATLABFcn		  "u(1:145)"
+		  OutputDimensions	  "[145,1]"
+		  Output1D		  off
+		}
+		Block {
+		  BlockType		  MATLABFcn
+		  Name			  "Trama4 -\n(Tail + Guard Bits)"
+		  Position		  [300, 615, 350, 645]
+		  MATLABFcn		  "u(1:145)"
+		  OutputDimensions	  "[145,1]"
+		  Output1D		  off
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Out1"
+		  Position		  [1045, 383, 1075, 397]
+		  IconDisplay		  "Port number"
+		  BusOutputAsStruct	  off
+		}
+		Line {
+		  SrcBlock		  "In1"
+		  SrcPort		  1
+		  DstBlock		  "Reshape5"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Reshape5"
+		  SrcPort		  1
+		  Points		  [0, 0; 10, 0]
+		  Branch {
+		    Points		    [0, -65]
+		    Branch {
+		    Points		    [0, -160]
+		    DstBlock		    "Trama 1"
+		    DstPort		    1
+		    }
+		    Branch {
+		    DstBlock		    "Trama 2"
+		    DstPort		    1
+		    }
+		  }
+		  Branch {
+		    Points		    [0, 95]
+		    Branch {
+		    Points		    [0, 160]
+		    DstBlock		    "Trama 4"
+		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [0, 0]
+		    DstBlock		    "Trama 3"
+		    DstPort		    1
+		    }
+		  }
+		}
+		Line {
+		  SrcBlock		  "Trama 1"
+		  SrcPort		  1
+		  DstBlock		  "Trama1 -\n(Tail + Guard Bits)"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Trama1 -\n(Tail + Guard Bits)"
+		  SrcPort		  1
+		  Points		  [0, 0; 20, 0]
+		  Branch {
+		    Points		    [0, 40]
+		    DstBlock		    "Bits Encriptados  2\n+ SF2"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, -40]
+		    DstBlock		    "Bits Encriptados 1 +\nTail Bits +"
+" SF1 + Training"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "Bits Encriptados 1 +\nTail Bits + S"
+"F1 + Training"
+		  SrcPort		  1
+		  DstBlock		  "Bits Encriptados 1\n+ Tail Bits + S"
+"F1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Bits Encriptados 1\n+ Tail Bits + S"
+"F1"
+		  SrcPort		  1
+		  DstBlock		  "Bits Encriptados 1\n+ Tail Bits"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Bits Encriptados 1\n+ Tail Bits"
+		  SrcPort		  1
+		  DstBlock		  "Bits Encriptados 1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Bits Encriptados  2\n+ SF2"
+		  SrcPort		  1
+		  DstBlock		  "Bits Encriptados 2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Trama 2"
+		  SrcPort		  1
+		  DstBlock		  "Trama2 -\n(Tail + Guard Bits)"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Trama2 -\n(Tail + Guard Bits)"
+		  SrcPort		  1
+		  Points		  [0, 0; 20, 0]
+		  Branch {
+		    Points		    [0, 40]
+		    DstBlock		    "Bits Encriptados  4\n+ SF2"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, -40]
+		    DstBlock		    "Bits Encriptados 3 +\nTail Bits +"
+" SF1 + Training1"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "Bits Encriptados 3 +\nTail Bits + S"
+"F1 + Training1"
+		  SrcPort		  1
+		  DstBlock		  "Bits Encriptados 3\n+ Tail Bits + S"
+"F1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Bits Encriptados 3\n+ Tail Bits + S"
+"F1"
+		  SrcPort		  1
+		  DstBlock		  "Bits Encriptados 3\n+ Tail Bits"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Bits Encriptados 3\n+ Tail Bits"
+		  SrcPort		  1
+		  DstBlock		  "Bits Encriptados 3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Bits Encriptados  4\n+ SF2"
+		  SrcPort		  1
+		  DstBlock		  "Bits Encriptados 4"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Trama 3"
+		  SrcPort		  1
+		  DstBlock		  "Trama3 -\n(Tail + Guard Bits)"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Trama3 -\n(Tail + Guard Bits)"
+		  SrcPort		  1
+		  Points		  [0, 0; 20, 0]
+		  Branch {
+		    Points		    [0, 40]
+		    DstBlock		    "Bits Encriptados  6\n+ SF2"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, -40]
+		    DstBlock		    "Bits Encriptados 5 +\nTail Bits +"
+" SF1 + Training2"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "Bits Encriptados 5 +\nTail Bits + S"
+"F1 + Training2"
+		  SrcPort		  1
+		  DstBlock		  "Bits Encriptados 5\n+ Tail Bits + S"
+"F1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Bits Encriptados 5\n+ Tail Bits + S"
+"F1"
+		  SrcPort		  1
+		  DstBlock		  "Bits Encriptados 5\n+ Tail Bits"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Bits Encriptados 5\n+ Tail Bits"
+		  SrcPort		  1
+		  DstBlock		  "Bits Encriptados 5"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Bits Encriptados  6\n+ SF2"
+		  SrcPort		  1
+		  DstBlock		  "Bits Encriptados 6"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Trama 4"
+		  SrcPort		  1
+		  DstBlock		  "Trama4 -\n(Tail + Guard Bits)"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Trama4 -\n(Tail + Guard Bits)"
+		  SrcPort		  1
+		  Points		  [0, 0; 20, 0]
+		  Branch {
+		    Points		    [0, 40]
+		    DstBlock		    "Bits Encriptados  8\n+ SF2"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, -40]
+		    DstBlock		    "Bits Encriptados 7 +\nTail Bits +"
+" SF1 + Training"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "Bits Encriptados 7 +\nTail Bits + S"
+"F1 + Training"
+		  SrcPort		  1
+		  DstBlock		  "Bits Encriptados 1\n+ Tail Bits + S"
+"F4"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Bits Encriptados 1\n+ Tail Bits + S"
+"F4"
+		  SrcPort		  1
+		  DstBlock		  "Bits Encriptados 7\n+ Tail Bits"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Bits Encriptados 7\n+ Tail Bits"
+		  SrcPort		  1
+		  DstBlock		  "Bits Encriptados 7"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Bits Encriptados  8\n+ SF2"
+		  SrcPort		  1
+		  DstBlock		  "Bits Encriptados 8"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Bits Encriptados 1"
+		  SrcPort		  1
+		  DstBlock		  "Concatenación\nde Matriz5"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Bits Encriptados 2"
+		  SrcPort		  1
+		  DstBlock		  "Concatenación\nde Matriz5"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Bits Encriptados 3"
+		  SrcPort		  1
+		  DstBlock		  "Concatenación\nde Matriz5"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "Bits Encriptados 4"
+		  SrcPort		  1
+		  DstBlock		  "Concatenación\nde Matriz5"
+		  DstPort		  4
+		}
+		Line {
+		  SrcBlock		  "Bits Encriptados 5"
+		  SrcPort		  1
+		  DstBlock		  "Concatenación\nde Matriz5"
+		  DstPort		  5
+		}
+		Line {
+		  SrcBlock		  "Bits Encriptados 6"
+		  SrcPort		  1
+		  DstBlock		  "Concatenación\nde Matriz5"
+		  DstPort		  6
+		}
+		Line {
+		  SrcBlock		  "Bits Encriptados 7"
+		  SrcPort		  1
+		  DstBlock		  "Concatenación\nde Matriz5"
+		  DstPort		  7
+		}
+		Line {
+		  SrcBlock		  "Bits Encriptados 8"
+		  SrcPort		  1
+		  DstBlock		  "Concatenación\nde Matriz5"
+		  DstPort		  8
+		}
+		Line {
+		  SrcBlock		  "Concatenación\nde Matriz5"
+		  SrcPort		  1
+		  DstBlock		  "Reshape1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Reshape1"
+		  SrcPort		  1
+		  DstBlock		  "Out1"
+		  DstPort		  1
+		}
+		Annotation {
+		  Name			  "Obtención de los bits encriptados\n"
+"desde las ráfagas y las tramas"
+		  Position		  [534, 35]
+		  FontName		  "Arial"
+		  FontSize		  20
+		  FontWeight		  "bold"
+		}
+		Annotation {
+		  Name			  "Bits Encriptados 7\n+ Tail Bits + S"
+"F1"
+		  Position		  [568, 621]
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out1"
+	      Position		      [1020, 213, 1050, 227]
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	    }
+	    Line {
+	      SrcBlock		      "Desentrelazado"
+	      SrcPort		      1
+	      Points		      [0, 0; 35, 0]
+	      Branch {
+		DstBlock		"Bits Clase 1\n+ CRC (185)"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 210]
+		DstBlock		"Bits Clase 2\n(78)"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Bits Clase 1\n+ CRC (185)"
+	      SrcPort		      1
+	      DstBlock		      "Decodificador\nViterbi"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Decodificador\nViterbi"
+	      SrcPort		      1
+	      Points		      [5, 0; 10, 0]
+	      Branch {
+		DstBlock		"Bits Clase 1a\n+ CRC (53)"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 135]
+		DstBlock		"Bits Clase 1b\n(132)"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Bits Clase 1a\n+ CRC (53)"
+	      SrcPort		      1
+	      DstBlock		      "Detector\nde CRC"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Bits Clase 2\n(78)"
+	      SrcPort		      1
+	      Points		      [245, 0; 0, -60]
+	      DstBlock		      "Matrix\nConcatenation1"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "Bits Clase 1b\n(132)"
+	      SrcPort		      1
+	      DstBlock		      "Matrix\nConcatenation1"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Detector\nde CRC"
+	      SrcPort		      1
+	      Points		      [15, 0; 0, 135]
+	      DstBlock		      "Matrix\nConcatenation1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Detector\nde CRC"
+	      SrcPort		      2
+	      Points		      [0, 65]
+	      DstBlock		      "Error"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Matrix\nConcatenation1"
+	      SrcPort		      1
+	      DstBlock		      "Out1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Separación\nRafagas"
+	      SrcPort		      1
+	      DstBlock		      "Desentrelazado"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "In1"
+	      SrcPort		      1
+	      DstBlock		      "Separación\nRafagas"
+	      DstPort		      1
+	    }
+	    Annotation {
+	      Name		      "Decodificación"
+	      Position		      [463, 29]
+	      FontName		      "Arial"
+	      FontSize		      20
+	      FontWeight	      "bold"
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Demod"
+	  Ports			  [1, 1]
+	  Position		  [90, 44, 335, 166]
+	  BackgroundColor	  "[1.000000, 1.000000, 0.717647]"
+	  FontName		  "Arial"
+	  FontSize		  18
+	  FontWeight		  "bold"
+	  TreatAsAtomicUnit	  off
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  MaskDisplay		  "disp('Demodulacion')"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  System {
+	    Name		    "Demod"
+	    Location		    [195, 403, 821, 551]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In1"
+	      Position		      [15, 78, 45, 92]
+	      Port		      "1"
+	      IconDisplay	      "Port number"
+	      LatchInput	      off
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Decodificador\nDiferencial"
+	      Ports		      [1, 1]
+	      Position		      [345, 62, 435, 108]
+	      SourceBlock	      "commsrccod2/Differential\nDecoder"
+	      SourceType	      "Differential Decoder"
+	      ShowPortLabels	      on
+	      InitCond		      "0"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Demodulador\nGMSK"
+	      Ports		      [1, 1]
+	      Position		      [115, 59, 190, 111]
+	      SourceBlock	      "commdigbbndcpm2/GMSK\nDemodulator\nBase"
+"band"
+	      SourceType	      "GMSK Demodulator Baseband"
+	      ShowPortLabels	      on
+	      OutputType	      "Bit"
+	      BT		      ".3"
+	      pulseLength	      "1"
+	      preHistory	      "1"
+	      phaseOffset	      "0"
+	      samplesPerSymbol	      "1"
+	      traceBack		      "1"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Reshape1"
+	      Ports		      [1, 1]
+	      Position		      [490, 74, 535, 96]
+	      SourceBlock	      "simulink/Math\nOperations/Reshape"
+	      SourceType	      "Reshape"
+	      OutputDimensionality    "Customize"
+	      OutputDimensions	      "[157,4]"
+	    }
+	    Block {
+	      BlockType		      MATLABFcn
+	      Name		      "Retiro\ndel retraso"
+	      Position		      [240, 70, 290, 100]
+	      MATLABFcn		      "u(2:629)"
+	      OutputDimensions	      "[628,1]"
+	      Output1D		      off
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out1"
+	      Position		      [590, 78, 620, 92]
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	    }
+	    Line {
+	      SrcBlock		      "In1"
+	      SrcPort		      1
+	      DstBlock		      "Demodulador\nGMSK"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demodulador\nGMSK"
+	      SrcPort		      1
+	      DstBlock		      "Retiro\ndel retraso"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Decodificador\nDiferencial"
+	      SrcPort		      1
+	      DstBlock		      "Reshape1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Reshape1"
+	      SrcPort		      1
+	      DstBlock		      "Out1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Retiro\ndel retraso"
+	      SrcPort		      1
+	      DstBlock		      "Decodificador\nDiferencial"
+	      DstPort		      1
+	    }
+	    Annotation {
+	      Name		      "Demodulación"
+	      Position		      [264, 26]
+	      FontName		      "Arial"
+	      FontSize		      24
+	      FontWeight	      "bold"
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out1"
+	  Position		  [700, 98, 730, 112]
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Line {
+	  SrcBlock		  "In1"
+	  SrcPort		  1
+	  DstBlock		  "Demod"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demod"
+	  SrcPort		  1
+	  DstBlock		  "Decoder"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Decoder"
+	  SrcPort		  1
+	  DstBlock		  "Out1"
+	  DstPort		  1
+	}
+	Annotation {
+	  Name			  "Receptor"
+	  Position		  [357, 19]
+	  FontName		  "Arial"
+	  FontSize		  24
+	  FontWeight		  "bold"
+	}
+      }
+    }
+    Block {
+      BlockType		      Display
+      Name		      "BER"
+      Ports		      [1]
+      Position		      [265, 338, 460, 422]
+      BackgroundColor	      "[0.576471, 0.972549, 0.992157]"
+      DropShadow	      on
+      FontName		      "Arial"
+      FontSize		      16
+      FontWeight	      "bold"
+      Format		      "long"
+      Decimation	      "1"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Bernoulli Binary\nGenerator"
+      Ports		      [0, 1]
+      Position		      [15, 197, 100, 233]
+      ShowName		      off
+      SourceBlock	      "commrandsrc2/Bernoulli Binary\nGenerator"
+      SourceType	      "Bernoulli Binary Generator"
+      ShowPortLabels	      on
+      P			      "0.5"
+      seed		      "11111"
+      Ts		      "1/9600"
+      frameBased	      on
+      sampPerFrame	      "260"
+      orient		      off
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Cálculo de\ntasa de error"
+      Ports		      [2, 1]
+      Position		      [165, 352, 240, 403]
+      SourceBlock	      "commsink2/Error Rate\nCalculation"
+      SourceType	      "Error Rate Calculation"
+      N			      "0"
+      st_delay		      "0"
+      cp_mode		      "Entire frame"
+      subframe		      "[]"
+      PMode		      "Port"
+      WsName		      "ErrorVec"
+      RsMode2		      off
+      stop		      off
+      numErr		      "100"
+      maxBits		      "1e6"
+    }
+    Block {
+      BlockType		      DigitalClock
+      Name		      "Digital Clock"
+      Position		      [515, 372, 555, 388]
+      ShowName		      off
+      SampleTime	      "0.001"
+    }
+    Block {
+      BlockType		      Display
+      Name		      "Display1"
+      Ports		      [1]
+      Position		      [575, 368, 645, 392]
+      ShowName		      off
+      FontSize		      9
+      Decimation	      "1"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "background5"
+      Tag		      "Transmisor"
+      Ports		      [1, 1]
+      Position		      [225, 131, 605, 299]
+      BackgroundColor	      "[0.756863, 1.000000, 0.756863]"
+      ShowName		      off
+      FontName		      "Arial"
+      FontSize		      20
+      FontWeight	      "bold"
+      TreatAsAtomicUnit	      off
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      MaskDisplay	      "disp('Transmisor')"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      System {
+	Name			"background5"
+	Location		[168, 223, 998, 422]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "In1"
+	  Position		  [15, 108, 45, 122]
+	  Port			  "1"
+	  IconDisplay		  "Port number"
+	  LatchInput		  off
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "background2"
+	  Ports			  [1, 1]
+	  Position		  [430, 50, 720, 180]
+	  BackgroundColor	  "[1.000000, 1.000000, 0.717647]"
+	  ShowName		  off
+	  FontName		  "Arial"
+	  FontSize		  20
+	  FontWeight		  "bold"
+	  TreatAsAtomicUnit	  off
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  MaskDisplay		  "disp('Modulacion')"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  System {
+	    Name		    "background2"
+	    Location		    [471, 265, 1101, 450]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In1"
+	      Position		      [15, 88, 45, 102]
+	      Port		      "1"
+	      IconDisplay	      "Port number"
+	      LatchInput	      off
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Codificador\nDiferencial"
+	      Ports		      [1, 1]
+	      Position		      [190, 72, 280, 118]
+	      SourceBlock	      "commsrccod2/Differential\nEncoder"
+	      SourceType	      "Differential Encoder"
+	      ShowPortLabels	      on
+	      InitCond		      "0"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Inserción\nde ceros"
+	      Ports		      [1, 1]
+	      Position		      [340, 77, 385, 113]
+	      SourceBlock	      "dspsigops/Zero Pad"
+	      SourceType	      "Zero Pad"
+	      padSigAt		      "End"
+	      zpadAlong		      "Columns"
+	      padNumOutRowsSpecMethod "User-specified"
+	      numOutRows	      "629"
+	      padNumOutColsSpecMethod "User-specified"
+	      numOutCols	      "1"
+	      trunc_flag	      "None"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Modulador\nGMSK"
+	      Ports		      [1, 1]
+	      Position		      [435, 69, 510, 121]
+	      SourceBlock	      "commdigbbndcpm2/GMSK\nModulator\nBaseba"
+"nd"
+	      SourceType	      "GMSK Modulator Baseband"
+	      ShowPortLabels	      on
+	      inputType		      "Bit"
+	      BT		      ".3"
+	      pulseLength	      "1"
+	      preHistory	      "1"
+	      phaseOffset	      "0"
+	      samplesPerSymbol	      "1"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Reshape"
+	      Ports		      [1, 1]
+	      Position		      [95, 85, 125, 105]
+	      SourceBlock	      "simulink/Math\nOperations/Reshape"
+	      SourceType	      "Reshape"
+	      OutputDimensionality    "Column vector"
+	      OutputDimensions	      "[1,1]"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out1"
+	      Position		      [595, 88, 625, 102]
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	    }
+	    Line {
+	      SrcBlock		      "Codificador\nDiferencial"
+	      SrcPort		      1
+	      DstBlock		      "Inserción\nde ceros"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "In1"
+	      SrcPort		      1
+	      DstBlock		      "Reshape"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Modulador\nGMSK"
+	      SrcPort		      1
+	      DstBlock		      "Out1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Inserción\nde ceros"
+	      SrcPort		      1
+	      DstBlock		      "Modulador\nGMSK"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Reshape"
+	      SrcPort		      1
+	      DstBlock		      "Codificador\nDiferencial"
+	      DstPort		      1
+	    }
+	    Annotation {
+	      Name		      "Modulación"
+	      Position		      [322, 26]
+	      FontName		      "Arial"
+	      FontSize		      24
+	      FontWeight	      "bold"
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "background5"
+	  Tag			  "Codificación"
+	  Ports			  [1, 1]
+	  Position		  [115, 57, 365, 173]
+	  BackgroundColor	  "lightBlue"
+	  ShowName		  off
+	  FontName		  "Arial"
+	  FontSize		  20
+	  FontWeight		  "bold"
+	  TreatAsAtomicUnit	  off
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  MaskDisplay		  "disp('Codificacion')"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  System {
+	    Name		    "background5"
+	    Location		    [5, 140, 1237, 672]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In1"
+	      Position		      [15, 168, 45, 182]
+	      Port		      "1"
+	      IconDisplay	      "Port number"
+	      LatchInput	      off
+	    }
+	    Block {
+	      BlockType		      MATLABFcn
+	      Name		      "Bits Clase 1a\n(50)"
+	      Position		      [125, 90, 175, 120]
+	      MATLABFcn		      "u(1:50)"
+	      OutputDimensions	      "[50,1]"
+	      Output1D		      off
+	    }
+	    Block {
+	      BlockType		      MATLABFcn
+	      Name		      "Bits Clase 1b\n(132)"
+	      Position		      [125, 170, 175, 200]
+	      MATLABFcn		      "u(51:182)"
+	      OutputDimensions	      "[132,1]"
+	      Output1D		      off
+	    }
+	    Block {
+	      BlockType		      MATLABFcn
+	      Name		      "Bits Clase 2\n(78)"
+	      Position		      [125, 240, 175, 270]
+	      MATLABFcn		      "u(183:260)"
+	      OutputDimensions	      "[78,1]"
+	      Output1D		      off
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Buffer1"
+	      Ports		      [1, 1]
+	      Position		      [310, 80, 360, 130]
+	      SourceBlock	      "dspbuff3/Buffer"
+	      SourceType	      "Buffer"
+	      N			      "53"
+	      V			      "0"
+	      ic		      "0"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Buffer2"
+	      Ports		      [1, 1]
+	      Position		      [300, 160, 350, 210]
+	      SourceBlock	      "dspbuff3/Buffer"
+	      SourceType	      "Buffer"
+	      N			      "136"
+	      V			      "0"
+	      ic		      "0"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Buffer3"
+	      Ports		      [1, 1]
+	      Position		      [390, 230, 440, 280]
+	      SourceBlock	      "dspbuff3/Buffer"
+	      SourceType	      "Buffer"
+	      N			      "78"
+	      V			      "0"
+	      ic		      "0"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Codificador\nConvolucional"
+	      Ports		      [1, 1]
+	      Position		      [480, 115, 600, 175]
+	      SourceBlock	      "commcnvcod2/Convolutional\nEncoder"
+	      SourceType	      "Convolutional Encoder"
+	      trellis		      "poly2trellis(7,[133,171]) "
+	      reset		      "None"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Concatenación\nde Matriz"
+	      Ports		      [2, 1]
+	      Position		      [400, 124, 455, 166]
+	      SourceBlock	      "simulink/Math\nOperations/Matrix\nConca"
+"tenation"
+	      SourceType	      "Matrix Concatenation"
+	      numInports	      "2"
+	      catMethod		      "Vertical"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Cálculo e\ninserción de CRC"
+	      Ports		      [1, 1]
+	      Position		      [210, 81, 285, 129]
+	      SourceBlock	      "commcrc2/General CRC\nGenerator"
+	      SourceType	      "General CRC Generator"
+	      genPoly		      "[1 1 0 1]"
+	      iniStates		      "[0]"
+	      numChecksums	      "1"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Entrelazado"
+	      Ports		      [1, 1]
+	      Position		      [740, 113, 855, 197]
+	      FontName		      "Arial"
+	      FontSize		      14
+	      TreatAsAtomicUnit	      off
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      System {
+		Name			"Entrelazado"
+		Location		[342, 342, 791, 535]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "[456x1]"
+		  Position		  [30, 103, 60, 117]
+		  Port			  "1"
+		  IconDisplay		  "Port number"
+		  LatchInput		  off
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Entrelazador"
+		  Ports			  [1, 1]
+		  Position		  [120, 83, 200, 137]
+		  SourceBlock		  "commblkintrlv2/Matrix\nInterleaver"
+		  SourceType		  "Matrix Interleaver"
+		  ShowPortLabels	  on
+		  Nrows			  "57"
+		  Ncols			  "8"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Reshape"
+		  Ports			  [1, 1]
+		  Position		  [250, 98, 295, 122]
+		  SourceBlock		  "simulink/Math\nOperations/Reshape"
+		  SourceType		  "Reshape"
+		  OutputDimensionality	  "Customize"
+		  OutputDimensions	  "[57,8]"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "[57x8]"
+		  Position		  [340, 103, 370, 117]
+		  IconDisplay		  "Port number"
+		  BusOutputAsStruct	  off
+		}
+		Line {
+		  SrcBlock		  "[456x1]"
+		  SrcPort		  1
+		  DstBlock		  "Entrelazador"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Entrelazador"
+		  SrcPort		  1
+		  DstBlock		  "Reshape"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Reshape"
+		  SrcPort		  1
+		  DstBlock		  "[57x8]"
+		  DstPort		  1
+		}
+		Annotation {
+		  Name			  "Entrelazado"
+		  Position		  [218, 28]
+		  FontName		  "Arial"
+		  FontSize		  20
+		  FontWeight		  "bold"
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Inserción\nde ceros"
+	      Ports		      [1, 1]
+	      Position		      [225, 167, 270, 203]
+	      SourceBlock	      "dspsigops/Zero Pad"
+	      SourceType	      "Zero Pad"
+	      padSigAt		      "End"
+	      zpadAlong		      "Columns"
+	      padNumOutRowsSpecMethod "User-specified"
+	      numOutRows	      "136"
+	      padNumOutColsSpecMethod "User-specified"
+	      numOutCols	      "1"
+	      trunc_flag	      "None"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Ráfaga"
+	      Ports		      [1, 1]
+	      Position		      [900, 116, 1045, 194]
+	      FontName		      "Arial"
+	      FontSize		      16
+	      TreatAsAtomicUnit	      off
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      System {
+		Name			"Ráfaga"
+		Location		[9, 82, 1215, 993]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "In1"
+		  Position		  [15, 478, 45, 492]
+		  Port			  "1"
+		  IconDisplay		  "Port number"
+		  LatchInput		  off
+		}
+		Block {
+		  BlockType		  MATLABFcn
+		  Name			  "Bits\nEncriptados 1"
+		  Position		  [205, 80, 255, 110]
+		  MATLABFcn		  "u(1:57)"
+		  OutputDimensions	  "[57,1]"
+		  Output1D		  off
+		}
+		Block {
+		  BlockType		  MATLABFcn
+		  Name			  "Bits\nEncriptados 2"
+		  Position		  [205, 200, 255, 230]
+		  MATLABFcn		  "u(58:114)"
+		  OutputDimensions	  "[57,1]"
+		  Output1D		  off
+		}
+		Block {
+		  BlockType		  MATLABFcn
+		  Name			  "Bits\nEncriptados 3"
+		  Position		  [200, 275, 250, 305]
+		  MATLABFcn		  "u(115:171)"
+		  OutputDimensions	  "[57,1]"
+		  Output1D		  off
+		}
+		Block {
+		  BlockType		  MATLABFcn
+		  Name			  "Bits\nEncriptados 4"
+		  Position		  [205, 395, 255, 425]
+		  MATLABFcn		  "u(172:228)"
+		  OutputDimensions	  "[57,1]"
+		  Output1D		  off
+		}
+		Block {
+		  BlockType		  MATLABFcn
+		  Name			  "Bits\nEncriptados 5"
+		  Position		  [205, 470, 255, 500]
+		  MATLABFcn		  "u(229:285)"
+		  OutputDimensions	  "[57,1]"
+		  Output1D		  off
+		}
+		Block {
+		  BlockType		  MATLABFcn
+		  Name			  "Bits\nEncriptados 6"
+		  Position		  [205, 590, 255, 620]
+		  MATLABFcn		  "u(286:342)"
+		  OutputDimensions	  "[57,1]"
+		  Output1D		  off
+		}
+		Block {
+		  BlockType		  MATLABFcn
+		  Name			  "Bits\nEncriptados 7"
+		  Position		  [205, 665, 255, 695]
+		  MATLABFcn		  "u(343:399)"
+		  OutputDimensions	  "[57,1]"
+		  Output1D		  off
+		}
+		Block {
+		  BlockType		  MATLABFcn
+		  Name			  "Bits\nEncriptados 8"
+		  Position		  [205, 785, 255, 815]
+		  MATLABFcn		  "u(400:456)"
+		  OutputDimensions	  "[57,1]"
+		  Output1D		  off
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Concatenación\nde Matriz"
+		  Ports			  [2, 1]
+		  Position		  [585, 84, 640, 126]
+		  SourceBlock		  "simulink/Math\nOperations/Matrix\nC"
+"oncatenation"
+		  SourceType		  "Matrix Concatenation"
+		  numInports		  "2"
+		  catMethod		  "Vertical"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Concatenación\nde Matriz1"
+		  Ports			  [2, 1]
+		  Position		  [725, 94, 780, 136]
+		  SourceBlock		  "simulink/Math\nOperations/Matrix\nC"
+"oncatenation"
+		  SourceType		  "Matrix Concatenation"
+		  numInports		  "2"
+		  catMethod		  "Vertical"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Concatenación\nde Matriz2"
+		  Ports			  [2, 1]
+		  Position		  [585, 279, 640, 321]
+		  SourceBlock		  "simulink/Math\nOperations/Matrix\nC"
+"oncatenation"
+		  SourceType		  "Matrix Concatenation"
+		  numInports		  "2"
+		  catMethod		  "Vertical"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Concatenación\nde Matriz3"
+		  Ports			  [2, 1]
+		  Position		  [725, 289, 780, 331]
+		  SourceBlock		  "simulink/Math\nOperations/Matrix\nC"
+"oncatenation"
+		  SourceType		  "Matrix Concatenation"
+		  numInports		  "2"
+		  catMethod		  "Vertical"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Concatenación\nde Matriz4"
+		  Ports			  [2, 1]
+		  Position		  [585, 474, 640, 516]
+		  SourceBlock		  "simulink/Math\nOperations/Matrix\nC"
+"oncatenation"
+		  SourceType		  "Matrix Concatenation"
+		  numInports		  "2"
+		  catMethod		  "Vertical"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Concatenación\nde Matriz5"
+		  Ports			  [2, 1]
+		  Position		  [725, 484, 780, 526]
+		  SourceBlock		  "simulink/Math\nOperations/Matrix\nC"
+"oncatenation"
+		  SourceType		  "Matrix Concatenation"
+		  numInports		  "2"
+		  catMethod		  "Vertical"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Concatenación\nde Matriz6"
+		  Ports			  [2, 1]
+		  Position		  [585, 669, 640, 711]
+		  SourceBlock		  "simulink/Math\nOperations/Matrix\nC"
+"oncatenation"
+		  SourceType		  "Matrix Concatenation"
+		  numInports		  "2"
+		  catMethod		  "Vertical"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Concatenación\nde Matriz7"
+		  Ports			  [2, 1]
+		  Position		  [725, 679, 780, 721]
+		  SourceBlock		  "simulink/Math\nOperations/Matrix\nC"
+"oncatenation"
+		  SourceType		  "Matrix Concatenation"
+		  numInports		  "2"
+		  catMethod		  "Vertical"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Concatenación\nde Matriz8"
+		  Ports			  [4, 1]
+		  Position		  [1000, 365, 1055, 470]
+		  SourceBlock		  "simulink/Math\nOperations/Matrix\nC"
+"oncatenation"
+		  SourceType		  "Matrix Concatenation"
+		  numInports		  "4"
+		  catMethod		  "Vertical"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "Constant"
+		  Position		  [235, 145, 265, 175]
+		  Value			  "0"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "Constant1"
+		  Position		  [235, 340, 265, 370]
+		  Value			  "0"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "Constant2"
+		  Position		  [235, 535, 265, 565]
+		  Value			  "0"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "Constant3"
+		  Position		  [235, 730, 265, 760]
+		  Value			  "0"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Primer\nStealing Flag1"
+		  Ports			  [1, 1]
+		  Position		  [425, 77, 470, 113]
+		  SourceBlock		  "dspsigops/Zero Pad"
+		  SourceType		  "Zero Pad"
+		  padSigAt		  "End"
+		  zpadAlong		  "Columns"
+		  padNumOutRowsSpecMethod "User-specified"
+		  numOutRows		  "61"
+		  padNumOutColsSpecMethod "User-specified"
+		  numOutCols		  "1"
+		  trunc_flag		  "None"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Primer\nStealing Flag2"
+		  Ports			  [1, 1]
+		  Position		  [425, 272, 470, 308]
+		  SourceBlock		  "dspsigops/Zero Pad"
+		  SourceType		  "Zero Pad"
+		  padSigAt		  "End"
+		  zpadAlong		  "Columns"
+		  padNumOutRowsSpecMethod "User-specified"
+		  numOutRows		  "61"
+		  padNumOutColsSpecMethod "User-specified"
+		  numOutCols		  "1"
+		  trunc_flag		  "None"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Primer\nStealing Flag3"
+		  Ports			  [1, 1]
+		  Position		  [425, 467, 470, 503]
+		  SourceBlock		  "dspsigops/Zero Pad"
+		  SourceType		  "Zero Pad"
+		  padSigAt		  "End"
+		  zpadAlong		  "Columns"
+		  padNumOutRowsSpecMethod "User-specified"
+		  numOutRows		  "61"
+		  padNumOutColsSpecMethod "User-specified"
+		  numOutCols		  "1"
+		  trunc_flag		  "None"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Primer\nStealing Flag4"
+		  Ports			  [1, 1]
+		  Position		  [425, 662, 470, 698]
+		  SourceBlock		  "dspsigops/Zero Pad"
+		  SourceType		  "Zero Pad"
+		  padSigAt		  "End"
+		  zpadAlong		  "Columns"
+		  padNumOutRowsSpecMethod "User-specified"
+		  numOutRows		  "61"
+		  padNumOutColsSpecMethod "User-specified"
+		  numOutCols		  "1"
+		  trunc_flag		  "None"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Reshape"
+		  Ports			  [1, 1]
+		  Position		  [85, 475, 115, 495]
+		  SourceBlock		  "simulink/Math\nOperations/Reshape"
+		  SourceType		  "Reshape"
+		  OutputDimensionality	  "Column vector"
+		  OutputDimensions	  "[1,1]"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Reshape1"
+		  Ports			  [1, 1]
+		  Position		  [485, 150, 515, 170]
+		  SourceBlock		  "simulink/Math\nOperations/Reshape"
+		  SourceType		  "Reshape"
+		  OutputDimensionality	  "Column vector"
+		  OutputDimensions	  "[1,1]"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Reshape2"
+		  Ports			  [1, 1]
+		  Position		  [485, 345, 515, 365]
+		  SourceBlock		  "simulink/Math\nOperations/Reshape"
+		  SourceType		  "Reshape"
+		  OutputDimensionality	  "Column vector"
+		  OutputDimensions	  "[1,1]"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Reshape3"
+		  Ports			  [1, 1]
+		  Position		  [485, 540, 515, 560]
+		  SourceBlock		  "simulink/Math\nOperations/Reshape"
+		  SourceType		  "Reshape"
+		  OutputDimensionality	  "Column vector"
+		  OutputDimensions	  "[1,1]"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Reshape4"
+		  Ports			  [1, 1]
+		  Position		  [485, 735, 515, 755]
+		  SourceBlock		  "simulink/Math\nOperations/Reshape"
+		  SourceType		  "Reshape"
+		  OutputDimensionality	  "Column vector"
+		  OutputDimensions	  "[1,1]"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Reshape5"
+		  Ports			  [1, 1]
+		  Position		  [1085, 409, 1130, 431]
+		  SourceBlock		  "simulink/Math\nOperations/Reshape"
+		  SourceType		  "Reshape"
+		  OutputDimensionality	  "Customize"
+		  OutputDimensions	  "[157,4]"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Segunda\nStealing Flag1"
+		  Ports			  [1, 1]
+		  Position		  [425, 197, 470, 233]
+		  SourceBlock		  "dspsigops/Zero Pad"
+		  SourceType		  "Zero Pad"
+		  padSigAt		  "Beginning"
+		  zpadAlong		  "Columns"
+		  padNumOutRowsSpecMethod "User-specified"
+		  numOutRows		  "58"
+		  padNumOutColsSpecMethod "User-specified"
+		  numOutCols		  "1"
+		  trunc_flag		  "None"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Segunda\nStealing Flag2"
+		  Ports			  [1, 1]
+		  Position		  [425, 392, 470, 428]
+		  SourceBlock		  "dspsigops/Zero Pad"
+		  SourceType		  "Zero Pad"
+		  padSigAt		  "Beginning"
+		  zpadAlong		  "Columns"
+		  padNumOutRowsSpecMethod "User-specified"
+		  numOutRows		  "58"
+		  padNumOutColsSpecMethod "User-specified"
+		  numOutCols		  "1"
+		  trunc_flag		  "None"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Segunda\nStealing Flag3"
+		  Ports			  [1, 1]
+		  Position		  [425, 587, 470, 623]
+		  SourceBlock		  "dspsigops/Zero Pad"
+		  SourceType		  "Zero Pad"
+		  padSigAt		  "Beginning"
+		  zpadAlong		  "Columns"
+		  padNumOutRowsSpecMethod "User-specified"
+		  numOutRows		  "58"
+		  padNumOutColsSpecMethod "User-specified"
+		  numOutCols		  "1"
+		  trunc_flag		  "None"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Segunda\nStealing Flag4"
+		  Ports			  [1, 1]
+		  Position		  [425, 782, 470, 818]
+		  SourceBlock		  "dspsigops/Zero Pad"
+		  SourceType		  "Zero Pad"
+		  padSigAt		  "Beginning"
+		  zpadAlong		  "Columns"
+		  padNumOutRowsSpecMethod "User-specified"
+		  numOutRows		  "58"
+		  padNumOutColsSpecMethod "User-specified"
+		  numOutCols		  "1"
+		  trunc_flag		  "None"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Tail Bits\n+ Guard Bit1"
+		  Ports			  [1, 1]
+		  Position		  [810, 97, 855, 133]
+		  SourceBlock		  "dspsigops/Zero Pad"
+		  SourceType		  "Zero Pad"
+		  padSigAt		  "End"
+		  zpadAlong		  "Columns"
+		  padNumOutRowsSpecMethod "User-specified"
+		  numOutRows		  "157"
+		  padNumOutColsSpecMethod "User-specified"
+		  numOutCols		  "1"
+		  trunc_flag		  "None"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Tail Bits\n+ Guard Bit2"
+		  Ports			  [1, 1]
+		  Position		  [810, 487, 855, 523]
+		  SourceBlock		  "dspsigops/Zero Pad"
+		  SourceType		  "Zero Pad"
+		  padSigAt		  "End"
+		  zpadAlong		  "Columns"
+		  padNumOutRowsSpecMethod "User-specified"
+		  numOutRows		  "157"
+		  padNumOutColsSpecMethod "User-specified"
+		  numOutCols		  "1"
+		  trunc_flag		  "None"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Tail Bits\n+ Guard Bits1"
+		  Ports			  [1, 1]
+		  Position		  [810, 682, 855, 718]
+		  SourceBlock		  "dspsigops/Zero Pad"
+		  SourceType		  "Zero Pad"
+		  padSigAt		  "End"
+		  zpadAlong		  "Columns"
+		  padNumOutRowsSpecMethod "User-specified"
+		  numOutRows		  "157"
+		  padNumOutColsSpecMethod "User-specified"
+		  numOutCols		  "1"
+		  trunc_flag		  "None"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Tail Bits\n+ Guard Bits2"
+		  Ports			  [1, 1]
+		  Position		  [810, 292, 855, 328]
+		  SourceBlock		  "dspsigops/Zero Pad"
+		  SourceType		  "Zero Pad"
+		  padSigAt		  "End"
+		  zpadAlong		  "Columns"
+		  padNumOutRowsSpecMethod "User-specified"
+		  numOutRows		  "157"
+		  padNumOutColsSpecMethod "User-specified"
+		  numOutCols		  "1"
+		  trunc_flag		  "None"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Tail Bits1"
+		  Ports			  [1, 1]
+		  Position		  [320, 77, 365, 113]
+		  SourceBlock		  "dspsigops/Zero Pad"
+		  SourceType		  "Zero Pad"
+		  padSigAt		  "Beginning"
+		  zpadAlong		  "Columns"
+		  padNumOutRowsSpecMethod "User-specified"
+		  numOutRows		  "60"
+		  padNumOutColsSpecMethod "User-specified"
+		  numOutCols		  "1"
+		  trunc_flag		  "None"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Tail Bits2"
+		  Ports			  [1, 1]
+		  Position		  [320, 272, 365, 308]
+		  SourceBlock		  "dspsigops/Zero Pad"
+		  SourceType		  "Zero Pad"
+		  padSigAt		  "Beginning"
+		  zpadAlong		  "Columns"
+		  padNumOutRowsSpecMethod "User-specified"
+		  numOutRows		  "60"
+		  padNumOutColsSpecMethod "User-specified"
+		  numOutCols		  "1"
+		  trunc_flag		  "None"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Tail Bits3"
+		  Ports			  [1, 1]
+		  Position		  [320, 467, 365, 503]
+		  SourceBlock		  "dspsigops/Zero Pad"
+		  SourceType		  "Zero Pad"
+		  padSigAt		  "Beginning"
+		  zpadAlong		  "Columns"
+		  padNumOutRowsSpecMethod "User-specified"
+		  numOutRows		  "60"
+		  padNumOutColsSpecMethod "User-specified"
+		  numOutCols		  "1"
+		  trunc_flag		  "None"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Tail Bits4"
+		  Ports			  [1, 1]
+		  Position		  [320, 662, 365, 698]
+		  SourceBlock		  "dspsigops/Zero Pad"
+		  SourceType		  "Zero Pad"
+		  padSigAt		  "Beginning"
+		  zpadAlong		  "Columns"
+		  padNumOutRowsSpecMethod "User-specified"
+		  numOutRows		  "60"
+		  padNumOutColsSpecMethod "User-specified"
+		  numOutCols		  "1"
+		  trunc_flag		  "None"
+		}
+		Block {
+		  BlockType		  SubSystem
+		  Name			  "Training\nBits1"
+		  Ports			  [1, 1]
+		  Position		  [330, 137, 400, 183]
+		  TreatAsAtomicUnit	  off
+		  MinAlgLoopOccurrences	  off
+		  RTWSystemCode		  "Auto"
+		  Array {
+		    Type		    "Handle"
+		    Dimension		    0
+		    PropName		    "AvailSigsLoadSave"
+		  }
+		  MaskType		  "Stateflow"
+		  MaskDescription	  "Embedded MATLAB block"
+		  MaskDisplay		  "disp('fcn');"
+		  MaskSelfModifiable	  on
+		  MaskIconFrame		  on
+		  MaskIconOpaque	  off
+		  MaskIconRotate	  "none"
+		  MaskIconUnits		  "autoscale"
+		  System {
+		    Name		    "Training\nBits1"
+		    Location		    [257, 457, 812, 717]
+		    Open		    off
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "usletter"
+		    PaperUnits		    "inches"
+		    ZoomFactor		    "100"
+		    Block {
+		    BlockType		    Inport
+		    Name		    "u"
+		    Position		    [20, 101, 40, 119]
+		    Port		    "1"
+		    IconDisplay		    "Port number"
+		    LatchInput		    off
+		    }
+		    Block {
+		    BlockType		    Demux
+		    Name		    " Demux "
+		    Ports		    [1, 1]
+		    Position		    [270, 160, 320, 200]
+		    Outputs		    "1"
+		    }
+		    Block {
+		    BlockType		    "S-Function"
+		    Name		    " SFunction "
+		    Tag			    "Stateflow S-Function GSM_Blocks 2"
+		    Ports		    [1, 2]
+		    Position		    [180, 100, 230, 160]
+		    FunctionName	    "sf_sfun"
+		    PortCounts		    "[1 2]"
+		    Port {
+		    PortNumber		    2
+		    Name		    "y"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		    ShowSigGenPortName	    on
+		    }
+		    }
+		    Block {
+		    BlockType		    Terminator
+		    Name		    " Terminator "
+		    Position		    [460, 171, 480, 189]
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "y"
+		    Position		    [460, 101, 480, 119]
+		    IconDisplay		    "Port number"
+		    BusOutputAsStruct	    off
+		    }
+		    Line {
+		    SrcBlock		    " SFunction "
+		    SrcPort		    1
+		    Points		    [0, 65]
+		    DstBlock		    " Demux "
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    " Demux "
+		    SrcPort		    1
+		    DstBlock		    " Terminator "
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "u"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    1
+		    }
+		    Line {
+		    Name		    "y"
+		    Labels		    [0, 0]
+		    SrcBlock		    " SFunction "
+		    SrcPort		    2
+		    DstBlock		    "y"
+		    DstPort		    1
+		    }
+		  }
+		}
+		Block {
+		  BlockType		  SubSystem
+		  Name			  "Training\nBits2"
+		  Ports			  [1, 1]
+		  Position		  [330, 332, 400, 378]
+		  TreatAsAtomicUnit	  off
+		  MinAlgLoopOccurrences	  off
+		  RTWSystemCode		  "Auto"
+		  Array {
+		    Type		    "Handle"
+		    Dimension		    0
+		    PropName		    "AvailSigsLoadSave"
+		  }
+		  MaskType		  "Stateflow"
+		  MaskDescription	  "Embedded MATLAB block"
+		  MaskDisplay		  "disp('fcn');"
+		  MaskSelfModifiable	  on
+		  MaskIconFrame		  on
+		  MaskIconOpaque	  off
+		  MaskIconRotate	  "none"
+		  MaskIconUnits		  "autoscale"
+		  System {
+		    Name		    "Training\nBits2"
+		    Location		    [257, 457, 812, 717]
+		    Open		    off
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "usletter"
+		    PaperUnits		    "inches"
+		    ZoomFactor		    "100"
+		    Block {
+		    BlockType		    Inport
+		    Name		    "u"
+		    Position		    [20, 101, 40, 119]
+		    Port		    "1"
+		    IconDisplay		    "Port number"
+		    LatchInput		    off
+		    }
+		    Block {
+		    BlockType		    Demux
+		    Name		    " Demux "
+		    Ports		    [1, 1]
+		    Position		    [270, 160, 320, 200]
+		    Outputs		    "1"
+		    }
+		    Block {
+		    BlockType		    "S-Function"
+		    Name		    " SFunction "
+		    Tag			    "Stateflow S-Function GSM_Blocks 1"
+		    Ports		    [1, 2]
+		    Position		    [180, 100, 230, 160]
+		    FunctionName	    "sf_sfun"
+		    PortCounts		    "[1 2]"
+		    Port {
+		    PortNumber		    2
+		    Name		    "y"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		    ShowSigGenPortName	    on
+		    }
+		    }
+		    Block {
+		    BlockType		    Terminator
+		    Name		    " Terminator "
+		    Position		    [460, 171, 480, 189]
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "y"
+		    Position		    [460, 101, 480, 119]
+		    IconDisplay		    "Port number"
+		    BusOutputAsStruct	    off
+		    }
+		    Line {
+		    SrcBlock		    " SFunction "
+		    SrcPort		    1
+		    Points		    [0, 65]
+		    DstBlock		    " Demux "
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    " Demux "
+		    SrcPort		    1
+		    DstBlock		    " Terminator "
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "u"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    1
+		    }
+		    Line {
+		    Name		    "y"
+		    Labels		    [0, 0]
+		    SrcBlock		    " SFunction "
+		    SrcPort		    2
+		    DstBlock		    "y"
+		    DstPort		    1
+		    }
+		  }
+		}
+		Block {
+		  BlockType		  SubSystem
+		  Name			  "Training\nBits3"
+		  Ports			  [1, 1]
+		  Position		  [330, 527, 400, 573]
+		  TreatAsAtomicUnit	  off
+		  MinAlgLoopOccurrences	  off
+		  RTWSystemCode		  "Auto"
+		  Array {
+		    Type		    "Handle"
+		    Dimension		    0
+		    PropName		    "AvailSigsLoadSave"
+		  }
+		  MaskType		  "Stateflow"
+		  MaskDescription	  "Embedded MATLAB block"
+		  MaskDisplay		  "disp('fcn');"
+		  MaskSelfModifiable	  on
+		  MaskIconFrame		  on
+		  MaskIconOpaque	  off
+		  MaskIconRotate	  "none"
+		  MaskIconUnits		  "autoscale"
+		  System {
+		    Name		    "Training\nBits3"
+		    Location		    [257, 457, 812, 717]
+		    Open		    off
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "usletter"
+		    PaperUnits		    "inches"
+		    ZoomFactor		    "100"
+		    Block {
+		    BlockType		    Inport
+		    Name		    "u"
+		    Position		    [20, 101, 40, 119]
+		    Port		    "1"
+		    IconDisplay		    "Port number"
+		    LatchInput		    off
+		    }
+		    Block {
+		    BlockType		    Demux
+		    Name		    " Demux "
+		    Ports		    [1, 1]
+		    Position		    [270, 160, 320, 200]
+		    Outputs		    "1"
+		    }
+		    Block {
+		    BlockType		    "S-Function"
+		    Name		    " SFunction "
+		    Tag			    "Stateflow S-Function GSM_Blocks 3"
+		    Ports		    [1, 2]
+		    Position		    [180, 100, 230, 160]
+		    FunctionName	    "sf_sfun"
+		    PortCounts		    "[1 2]"
+		    Port {
+		    PortNumber		    2
+		    Name		    "y"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		    ShowSigGenPortName	    on
+		    }
+		    }
+		    Block {
+		    BlockType		    Terminator
+		    Name		    " Terminator "
+		    Position		    [460, 171, 480, 189]
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "y"
+		    Position		    [460, 101, 480, 119]
+		    IconDisplay		    "Port number"
+		    BusOutputAsStruct	    off
+		    }
+		    Line {
+		    SrcBlock		    " SFunction "
+		    SrcPort		    1
+		    Points		    [0, 65]
+		    DstBlock		    " Demux "
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    " Demux "
+		    SrcPort		    1
+		    DstBlock		    " Terminator "
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "u"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    1
+		    }
+		    Line {
+		    Name		    "y"
+		    Labels		    [0, 0]
+		    SrcBlock		    " SFunction "
+		    SrcPort		    2
+		    DstBlock		    "y"
+		    DstPort		    1
+		    }
+		  }
+		}
+		Block {
+		  BlockType		  SubSystem
+		  Name			  "Training\nBits4"
+		  Ports			  [1, 1]
+		  Position		  [330, 722, 400, 768]
+		  TreatAsAtomicUnit	  off
+		  MinAlgLoopOccurrences	  off
+		  RTWSystemCode		  "Auto"
+		  Array {
+		    Type		    "Handle"
+		    Dimension		    0
+		    PropName		    "AvailSigsLoadSave"
+		  }
+		  MaskType		  "Stateflow"
+		  MaskDescription	  "Embedded MATLAB block"
+		  MaskDisplay		  "disp('fcn');"
+		  MaskSelfModifiable	  on
+		  MaskIconFrame		  on
+		  MaskIconOpaque	  off
+		  MaskIconRotate	  "none"
+		  MaskIconUnits		  "autoscale"
+		  System {
+		    Name		    "Training\nBits4"
+		    Location		    [257, 457, 812, 717]
+		    Open		    off
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "usletter"
+		    PaperUnits		    "inches"
+		    ZoomFactor		    "100"
+		    Block {
+		    BlockType		    Inport
+		    Name		    "u"
+		    Position		    [20, 101, 40, 119]
+		    Port		    "1"
+		    IconDisplay		    "Port number"
+		    LatchInput		    off
+		    }
+		    Block {
+		    BlockType		    Demux
+		    Name		    " Demux "
+		    Ports		    [1, 1]
+		    Position		    [270, 160, 320, 200]
+		    Outputs		    "1"
+		    }
+		    Block {
+		    BlockType		    "S-Function"
+		    Name		    " SFunction "
+		    Tag			    "Stateflow S-Function GSM_Blocks 4"
+		    Ports		    [1, 2]
+		    Position		    [180, 100, 230, 160]
+		    FunctionName	    "sf_sfun"
+		    PortCounts		    "[1 2]"
+		    Port {
+		    PortNumber		    2
+		    Name		    "y"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		    ShowSigGenPortName	    on
+		    }
+		    }
+		    Block {
+		    BlockType		    Terminator
+		    Name		    " Terminator "
+		    Position		    [460, 171, 480, 189]
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "y"
+		    Position		    [460, 101, 480, 119]
+		    IconDisplay		    "Port number"
+		    BusOutputAsStruct	    off
+		    }
+		    Line {
+		    SrcBlock		    " SFunction "
+		    SrcPort		    1
+		    Points		    [0, 65]
+		    DstBlock		    " Demux "
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    " Demux "
+		    SrcPort		    1
+		    DstBlock		    " Terminator "
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "u"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    1
+		    }
+		    Line {
+		    Name		    "y"
+		    Labels		    [0, 0]
+		    SrcBlock		    " SFunction "
+		    SrcPort		    2
+		    DstBlock		    "y"
+		    DstPort		    1
+		    }
+		  }
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Out1"
+		  Position		  [1165, 413, 1195, 427]
+		  IconDisplay		  "Port number"
+		  BusOutputAsStruct	  off
+		}
+		Line {
+		  SrcBlock		  "In1"
+		  SrcPort		  1
+		  DstBlock		  "Reshape"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Reshape"
+		  SrcPort		  1
+		  Points		  [0, 0; 35, 0]
+		  Branch {
+		    Points		    [0, 0]
+		    Branch {
+		    Points		    [0, -75]
+		    Branch {
+		    Points		    [0, -120]
+		    Branch {
+		    Points		    [0, -75]
+		    Branch {
+		    Points		    [0, -120]
+		    DstBlock		    "Bits\nEncriptados 1"
+		    DstPort		    1
+		    }
+		    Branch {
+		    DstBlock		    "Bits\nEncriptados 2"
+		    DstPort		    1
+		    }
+		    }
+		    Branch {
+		    DstBlock		    "Bits\nEncriptados 3"
+		    DstPort		    1
+		    }
+		    }
+		    Branch {
+		    DstBlock		    "Bits\nEncriptados 4"
+		    DstPort		    1
+		    }
+		    }
+		    Branch {
+		    DstBlock		    "Bits\nEncriptados 5"
+		    DstPort		    1
+		    }
+		  }
+		  Branch {
+		    Points		    [0, 120]
+		    Branch {
+		    Points		    [0, 70]
+		    Branch {
+		    Points		    [0, 125]
+		    DstBlock		    "Bits\nEncriptados 8"
+		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [0, 5]
+		    DstBlock		    "Bits\nEncriptados 7"
+		    DstPort		    1
+		    }
+		    }
+		    Branch {
+		    DstBlock		    "Bits\nEncriptados 6"
+		    DstPort		    1
+		    }
+		  }
+		}
+		Line {
+		  SrcBlock		  "Bits\nEncriptados 1"
+		  SrcPort		  1
+		  DstBlock		  "Tail Bits1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Tail Bits1"
+		  SrcPort		  1
+		  DstBlock		  "Primer\nStealing Flag1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Training\nBits1"
+		  SrcPort		  1
+		  DstBlock		  "Reshape1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Reshape1"
+		  SrcPort		  1
+		  Points		  [50, 0]
+		  DstBlock		  "Concatenación\nde Matriz"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Constant"
+		  SrcPort		  1
+		  DstBlock		  "Training\nBits1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Bits\nEncriptados 2"
+		  SrcPort		  1
+		  DstBlock		  "Segunda\nStealing Flag1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Concatenación\nde Matriz"
+		  SrcPort		  1
+		  DstBlock		  "Concatenación\nde Matriz1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Concatenación\nde Matriz1"
+		  SrcPort		  1
+		  DstBlock		  "Tail Bits\n+ Guard Bit1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Primer\nStealing Flag1"
+		  SrcPort		  1
+		  DstBlock		  "Concatenación\nde Matriz"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Segunda\nStealing Flag1"
+		  SrcPort		  1
+		  Points		  [205, 0; 0, -90]
+		  DstBlock		  "Concatenación\nde Matriz1"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Bits\nEncriptados 3"
+		  SrcPort		  1
+		  DstBlock		  "Tail Bits2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Tail Bits2"
+		  SrcPort		  1
+		  DstBlock		  "Primer\nStealing Flag2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Training\nBits2"
+		  SrcPort		  1
+		  DstBlock		  "Reshape2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Reshape2"
+		  SrcPort		  1
+		  Points		  [50, 0]
+		  DstBlock		  "Concatenación\nde Matriz2"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Constant1"
+		  SrcPort		  1
+		  DstBlock		  "Training\nBits2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Bits\nEncriptados 4"
+		  SrcPort		  1
+		  DstBlock		  "Segunda\nStealing Flag2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Concatenación\nde Matriz2"
+		  SrcPort		  1
+		  DstBlock		  "Concatenación\nde Matriz3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Concatenación\nde Matriz3"
+		  SrcPort		  1
+		  DstBlock		  "Tail Bits\n+ Guard Bits2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Primer\nStealing Flag2"
+		  SrcPort		  1
+		  DstBlock		  "Concatenación\nde Matriz2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Segunda\nStealing Flag2"
+		  SrcPort		  1
+		  Points		  [205, 0; 0, -90]
+		  DstBlock		  "Concatenación\nde Matriz3"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Bits\nEncriptados 5"
+		  SrcPort		  1
+		  DstBlock		  "Tail Bits3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Tail Bits3"
+		  SrcPort		  1
+		  DstBlock		  "Primer\nStealing Flag3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Training\nBits3"
+		  SrcPort		  1
+		  DstBlock		  "Reshape3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Reshape3"
+		  SrcPort		  1
+		  Points		  [50, 0]
+		  DstBlock		  "Concatenación\nde Matriz4"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Constant2"
+		  SrcPort		  1
+		  DstBlock		  "Training\nBits3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Bits\nEncriptados 6"
+		  SrcPort		  1
+		  DstBlock		  "Segunda\nStealing Flag3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Concatenación\nde Matriz4"
+		  SrcPort		  1
+		  DstBlock		  "Concatenación\nde Matriz5"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Concatenación\nde Matriz5"
+		  SrcPort		  1
+		  DstBlock		  "Tail Bits\n+ Guard Bit2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Primer\nStealing Flag3"
+		  SrcPort		  1
+		  DstBlock		  "Concatenación\nde Matriz4"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Segunda\nStealing Flag3"
+		  SrcPort		  1
+		  Points		  [205, 0; 0, -90]
+		  DstBlock		  "Concatenación\nde Matriz5"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Bits\nEncriptados 7"
+		  SrcPort		  1
+		  DstBlock		  "Tail Bits4"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Tail Bits4"
+		  SrcPort		  1
+		  DstBlock		  "Primer\nStealing Flag4"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Training\nBits4"
+		  SrcPort		  1
+		  DstBlock		  "Reshape4"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Reshape4"
+		  SrcPort		  1
+		  Points		  [50, 0]
+		  DstBlock		  "Concatenación\nde Matriz6"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Constant3"
+		  SrcPort		  1
+		  DstBlock		  "Training\nBits4"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Bits\nEncriptados 8"
+		  SrcPort		  1
+		  DstBlock		  "Segunda\nStealing Flag4"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Concatenación\nde Matriz6"
+		  SrcPort		  1
+		  DstBlock		  "Concatenación\nde Matriz7"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Concatenación\nde Matriz7"
+		  SrcPort		  1
+		  DstBlock		  "Tail Bits\n+ Guard Bits1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Primer\nStealing Flag4"
+		  SrcPort		  1
+		  DstBlock		  "Concatenación\nde Matriz6"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Segunda\nStealing Flag4"
+		  SrcPort		  1
+		  Points		  [205, 0; 0, -90]
+		  DstBlock		  "Concatenación\nde Matriz7"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Tail Bits\n+ Guard Bit1"
+		  SrcPort		  1
+		  Points		  [90, 0; 0, 265]
+		  DstBlock		  "Concatenación\nde Matriz8"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Tail Bits\n+ Guard Bits2"
+		  SrcPort		  1
+		  Points		  [65, 0; 0, 95]
+		  DstBlock		  "Concatenación\nde Matriz8"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Tail Bits\n+ Guard Bit2"
+		  SrcPort		  1
+		  Points		  [65, 0; 0, -75]
+		  DstBlock		  "Concatenación\nde Matriz8"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "Tail Bits\n+ Guard Bits1"
+		  SrcPort		  1
+		  Points		  [90, 0; 0, -245]
+		  DstBlock		  "Concatenación\nde Matriz8"
+		  DstPort		  4
+		}
+		Line {
+		  SrcBlock		  "Concatenación\nde Matriz8"
+		  SrcPort		  1
+		  DstBlock		  "Reshape5"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Reshape5"
+		  SrcPort		  1
+		  DstBlock		  "Out1"
+		  DstPort		  1
+		}
+		Annotation {
+		  Name			  "Creación de Ráfagas Normales\n(Norm"
+"al Burst)"
+		  Position		  [531, 30]
+		  FontName		  "Arial"
+		  FontSize		  22
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Trama de \nDatos\n"
+	      Ports		      [2, 1]
+	      Position		      [655, 133, 700, 177]
+	      SourceBlock	      "simulink/Math\nOperations/Matrix\nConca"
+"tenation"
+	      SourceType	      "Matrix Concatenation"
+	      numInports	      "2"
+	      catMethod		      "Vertical"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out1"
+	      Position		      [1175, 148, 1205, 162]
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	    }
+	    Line {
+	      SrcBlock		      "Bits Clase 1a\n(50)"
+	      SrcPort		      1
+	      DstBlock		      "Cálculo e\ninserción de CRC"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Cálculo e\ninserción de CRC"
+	      SrcPort		      1
+	      DstBlock		      "Buffer1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Bits Clase 1b\n(132)"
+	      SrcPort		      1
+	      DstBlock		      "Inserción\nde ceros"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Bits Clase 2\n(78)"
+	      SrcPort		      1
+	      DstBlock		      "Buffer3"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Inserción\nde ceros"
+	      SrcPort		      1
+	      DstBlock		      "Buffer2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Concatenación\nde Matriz"
+	      SrcPort		      1
+	      DstBlock		      "Codificador\nConvolucional"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Codificador\nConvolucional"
+	      SrcPort		      1
+	      DstBlock		      "Trama de \nDatos\n"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Buffer1"
+	      SrcPort		      1
+	      Points		      [10, 0; 0, 30]
+	      DstBlock		      "Concatenación\nde Matriz"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Buffer2"
+	      SrcPort		      1
+	      Points		      [20, 0; 0, -30]
+	      DstBlock		      "Concatenación\nde Matriz"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Buffer3"
+	      SrcPort		      1
+	      Points		      [170, 0; 0, -90]
+	      DstBlock		      "Trama de \nDatos\n"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "In1"
+	      SrcPort		      1
+	      Points		      [0, 0; 15, 0]
+	      Branch {
+		Points			[0, -70]
+		DstBlock		"Bits Clase 1a\n(50)"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 10]
+		Branch {
+		  DstBlock		  "Bits Clase 1b\n(132)"
+		  DstPort		  1
+		}
+		Branch {
+		  Points		  [0, 70]
+		  DstBlock		  "Bits Clase 2\n(78)"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Trama de \nDatos\n"
+	      SrcPort		      1
+	      DstBlock		      "Entrelazado"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Entrelazado"
+	      SrcPort		      1
+	      DstBlock		      "Ráfaga"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Ráfaga"
+	      SrcPort		      1
+	      DstBlock		      "Out1"
+	      DstPort		      1
+	    }
+	    Annotation {
+	      Name		      "Codificación"
+	      Position		      [506, 39]
+	      FontName		      "Arial"
+	      FontSize		      24
+	      FontWeight	      "bold"
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out1"
+	  Position		  [795, 108, 825, 122]
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Line {
+	  SrcBlock		  "background5"
+	  SrcPort		  1
+	  DstBlock		  "background2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "background2"
+	  SrcPort		  1
+	  DstBlock		  "Out1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "In1"
+	  SrcPort		  1
+	  DstBlock		  "background5"
+	  DstPort		  1
+	}
+	Annotation {
+	  Name			  "Transmisor"
+	  Position		  [355, 26]
+	  FontName		  "Arial"
+	  FontSize		  24
+	  FontWeight		  "bold"
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "background6"
+      Ports		      [1, 1]
+      Position		      [665, 300, 765, 480]
+      Orientation	      "down"
+      BackgroundColor	      "[0.854902, 0.854902, 0.854902]"
+      NamePlacement	      "alternate"
+      ShowName		      off
+      FontName		      "Arial"
+      FontSize		      20
+      FontWeight	      "bold"
+      TreatAsAtomicUnit	      off
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      MaskDisplay	      "disp('Canal')"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      System {
+	Name			"background6"
+	Location		[504, 492, 1155, 885]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "In1"
+	  Position		  [20, 93, 50, 107]
+	  Port			  "1"
+	  IconDisplay		  "Port number"
+	  LatchInput		  off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "AWGN"
+	  Ports			  [1, 1]
+	  Position		  [360, 304, 440, 346]
+	  SourceBlock		  "commchan2/AWGN\nChannel"
+	  SourceType		  "AWGN Channel"
+	  ShowPortLabels	  on
+	  seed			  "12345"
+	  noiseMode		  "Signal to noise ratio  (SNR)"
+	  EbNodB		  "1"
+	  EsNodB		  "10"
+	  SNRdB			  "10"
+	  bitsPerSym		  "1"
+	  Ps			  "1e-3"
+	  Tsym			  "1/9600"
+	  variance		  "1"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Canal\nAWGN"
+	  Ports			  [1, 1]
+	  Position		  [265, 179, 345, 221]
+	  SourceBlock		  "commchan2/AWGN\nChannel"
+	  SourceType		  "AWGN Channel"
+	  ShowPortLabels	  on
+	  seed			  "67"
+	  noiseMode		  "Signal to noise ratio  (SNR)"
+	  EbNodB		  "1"
+	  EsNodB		  "10"
+	  SNRdB			  "10"
+	  bitsPerSym		  "1"
+	  Ps			  "1e-3"
+	  Tsym			  "1/9600"
+	  variance		  "1"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Canal con Multiruta\nRayleigh"
+	  Ports			  [1, 1]
+	  Position		  [195, 303, 275, 347]
+	  SourceBlock		  "commchan2/Multipath Rayleigh\nFading Channe"
+"l"
+	  SourceType		  "Multipath Rayleigh Fading Channel"
+	  ShowPortLabels	  on
+	  Fd			  "50"
+	  simTs			  "260/(629*9600)"
+	  delayVec		  "[0 260e-9 521e-9 781e-9]"
+	  gainVecdB		  "[1 -3 -6 -9]"
+	  normGain		  off
+	  Seed			  "12345"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out1"
+	  Position		  [565, 93, 595, 107]
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Line {
+	  SrcBlock		  "Canal con Multiruta\nRayleigh"
+	  SrcPort		  1
+	  DstBlock		  "AWGN"
+	  DstPort		  1
+	}
+	Line {
+	  Points		  [105, 200]
+	  DstBlock		  "Canal\nAWGN"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Canal\nAWGN"
+	  SrcPort		  1
+	  Points		  [110, 0]
+	}
+	Line {
+	  SrcBlock		  "In1"
+	  SrcPort		  1
+	  Points		  [40, 0; 0, 225]
+	  DstBlock		  "Canal con Multiruta\nRayleigh"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "AWGN"
+	  SrcPort		  1
+	  Points		  [50, 0; 0, -225]
+	  DstBlock		  "Out1"
+	  DstPort		  1
+	}
+	Annotation {
+	  Name			  "Canal"
+	  Position		  [327, 21]
+	  FontName		  "Arial"
+	  FontSize		  24
+	  FontWeight		  "bold"
+	}
+      }
+    }
+    Line {
+      SrcBlock		      "Bernoulli Binary\nGenerator"
+      SrcPort		      1
+      Points		      [0, 0; 15, 0]
+      Branch {
+	DstBlock		"background5"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 150]
+	DstBlock		"Cálculo de\ntasa de error"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Cálculo de\ntasa de error"
+      SrcPort		      1
+      DstBlock		      "BER"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Digital Clock"
+      SrcPort		      1
+      DstBlock		      "Display1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "background5"
+      SrcPort		      1
+      Points		      [105, 0]
+      DstBlock		      "background6"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "."
+      SrcPort		      1
+      Points		      [-150, 0; 0, -155]
+      DstBlock		      "Cálculo de\ntasa de error"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "background6"
+      SrcPort		      1
+      Points		      [0, 60]
+      DstBlock		      "."
+      DstPort		      1
+    }
+    Annotation {
+      Name		      "Transmisión y Recepción\nde Canal de Tráfico\np"
+"ara GSM"
+      Position		      [392, 60]
+      FontName		      "Arial"
+      FontSize		      26
+      FontWeight	      "bold"
+    }
+    Annotation {
+      Name		      "Juan Antonio Simón Molina\nUniversidad de las A"
+"méricas - Puebla\nMexico\njuansimonmolina@gmail.com"
+      Position		      [903, 45]
+      HorizontalAlignment     "right"
+      FontName		      "Arial"
+      FontSize		      16
+    }
+    Annotation {
+      Name		      "Tiempo"
+      Position		      [605, 361]
+      HorizontalAlignment     "left"
+      ForegroundColor	      "red"
+      FontName		      "Arial"
+      FontSize		      9
+    }
+    Annotation {
+      Name		      "BER"
+      Position		      [477, 355]
+    }
+    Annotation {
+      Name		      "Errores"
+      Position		      [484, 379]
+    }
+    Annotation {
+      Name		      "Muestras"
+      Position		      [489, 403]
+    }
+  }
+}
+
+# Finite State Machines
+#
+#    Stateflow Version 6.0 (R14) dated Apr 30 2004, 06:19:14
+#
+#
+
+Stateflow {
+
+	machine {
+		id                   		1
+		name                 		"GSM_Blocks"
+		created              		"09-Apr-2006 16:39:25"
+		isLibrary            		0
+		firstTarget          		30
+		sfVersion            		60014000.000006
+	}
+
+	chart {
+		id                       		2
+		name                     		"background5/background5/Ráfaga/Training\n"
+					"Bits2"
+		windowPosition           		[296.813 314.45 200.25 189.75]
+		viewLimits               		[0 156.75 0 153.75]
+		screen                   		[1 1 1280 1024 1.333333333333333]
+		treeNode                 		[0 3 0 0]
+		firstTransition          		5
+		firstJunction            		4
+		viewObj                  		2
+		machine                  		1
+		decomposition            		CLUSTER_CHART
+		type                     		EML_CHART
+		firstData                		6
+		chartFileNumber          		1
+		disableImplicitCasting   		1
+		eml {
+			name		"fcn"
+		}
+	}
+
+	state {
+		id                  		3
+		labelString         		"eML_blk_kernel()"
+		position            		[18 64.5 118 66]
+		fontSize            		12
+		chart               		2
+		treeNode            		[2 0 0 0]
+		superState          		SUBCHART
+		subviewer           		2
+		type                		FUNC_STATE
+		decomposition       		CLUSTER_STATE
+		eml {
+			isEML       		1
+			script      		"function y = fcn(u)\n"
+						"% This block supports an embeddable subset of the MATLAB la"
+						"nguage.\n"
+						"% See the help menu for details. \n"
+						"\n"
+						"training2 = [0,0,1,0,1,1,0,1,1,1,0,1,1,1,1,0,0,0,1,0,1,1,0,"
+						"1,1,1];\n"
+						"y = training2;"
+			editorLayout		"100 M4x1[189 104 952 658]"
+		}
+	}
+
+	junction {
+		id         		4
+		position   		[23.5747 49.5747 7]
+		chart      		2
+		linkNode   		[2 0 0]
+		subviewer  		2
+		type       		CONNECTIVE_JUNCTION
+	}
+
+	transition {
+		id             		5
+		labelString    		"{eML_blk_kernel();}"
+		labelPosition  		[32.125 19.875 102.544 14.964]
+		fontSize       		12
+		src {
+			intersection		[0 0 1 0 23.5747 14.625 0 0]
+		}
+		dst {
+			id          		4
+			intersection		[7 0 -1 -1 23.5747 42.5747 0 0]
+		}
+		midPoint       		[23.5747 24.9468]
+		chart          		2
+		linkNode       		[2 0 0]
+		dataLimits     		[21.175 25.975 14.625 42.575]
+		subviewer      		2
+		drawStyle      		SMART
+	}
+
+	data {
+		id                            		6
+		name                          		"u"
+		linkNode                      		[2 0 7]
+		scope                         		INPUT_DATA
+		machine                       		1
+		dataType                      		"inherited"
+		fixptType {
+			bias    		0
+			slope   		1
+			exponent		0
+			baseType		SF_INT16_TYPE
+			lock    		0
+		}
+		dlgFixptMode                  		0
+		props {
+			range {
+				minimum		""
+				maximum		""
+			}
+			array {
+				size      		"-1"
+			}
+		}
+	}
+
+	data {
+		id                            		7
+		name                          		"y"
+		linkNode                      		[2 6 0]
+		scope                         		OUTPUT_DATA
+		machine                       		1
+		dataType                      		"inherited"
+		fixptType {
+			bias    		0
+			slope   		1
+			exponent		0
+			baseType		SF_INT16_TYPE
+			lock    		0
+		}
+		dlgFixptMode                  		0
+		props {
+			range {
+				minimum		""
+				maximum		""
+			}
+			array {
+				size      		"-1"
+				firstIndex		"1"
+			}
+		}
+	}
+
+	instance {
+		id     		8
+		name   		"background5/background5/Ráfaga/Training\n"
+					"Bits2"
+		machine		1
+		chart  		2
+	}
+
+	chart {
+		id                       		9
+		name                     		"background5/background5/Ráfaga/Training\n"
+					"Bits1"
+		windowPosition           		[281.813 329.45 200.25 189.75]
+		viewLimits               		[0 156.75 0 153.75]
+		screen                   		[1 1 1280 1024 1.333333333333333]
+		treeNode                 		[0 10 0 0]
+		firstTransition          		12
+		firstJunction            		11
+		viewObj                  		9
+		machine                  		1
+		decomposition            		CLUSTER_CHART
+		type                     		EML_CHART
+		firstData                		13
+		chartFileNumber          		2
+		disableImplicitCasting   		1
+		eml {
+			name		"fcn"
+		}
+	}
+
+	state {
+		id                  		10
+		labelString         		"eML_blk_kernel()"
+		position            		[18 64.5 118 66]
+		fontSize            		12
+		chart               		9
+		treeNode            		[9 0 0 0]
+		superState          		SUBCHART
+		subviewer           		9
+		type                		FUNC_STATE
+		decomposition       		CLUSTER_STATE
+		eml {
+			isEML       		1
+			script      		"function y = fcn(u)\n"
+						"% This block supports an embeddable subset of the MATLAB la"
+						"nguage.\n"
+						"% See the help menu for details. \n"
+						"\n"
+						"training1 = [0,0,1,0,0,1,0,1,1,1,0,0,0,0,1,0,0,0,1,0,0,1,0,"
+						"1,1,1];\n"
+						"y = training1;"
+			editorLayout		"100 M4x1[189 104 952 658]"
+		}
+	}
+
+	junction {
+		id         		11
+		position   		[23.5747 49.5747 7]
+		chart      		9
+		linkNode   		[9 0 0]
+		subviewer  		9
+		type       		CONNECTIVE_JUNCTION
+	}
+
+	transition {
+		id             		12
+		labelString    		"{eML_blk_kernel();}"
+		labelPosition  		[32.125 19.875 102.544 14.964]
+		fontSize       		12
+		src {
+			intersection		[0 0 1 0 23.5747 14.625 0 0]
+		}
+		dst {
+			id          		11
+			intersection		[7 0 -1 -1 23.5747 42.5747 0 0]
+		}
+		midPoint       		[23.5747 24.9468]
+		chart          		9
+		linkNode       		[9 0 0]
+		dataLimits     		[21.175 25.975 14.625 42.575]
+		subviewer      		9
+		drawStyle      		SMART
+	}
+
+	data {
+		id                            		13
+		name                          		"u"
+		linkNode                      		[9 0 14]
+		scope                         		INPUT_DATA
+		machine                       		1
+		dataType                      		"inherited"
+		fixptType {
+			bias    		0
+			slope   		1
+			exponent		0
+			baseType		SF_INT16_TYPE
+			lock    		0
+		}
+		dlgFixptMode                  		0
+		props {
+			range {
+				minimum		""
+				maximum		""
+			}
+			array {
+				size      		"-1"
+			}
+		}
+	}
+
+	data {
+		id                            		14
+		name                          		"y"
+		linkNode                      		[9 13 0]
+		scope                         		OUTPUT_DATA
+		machine                       		1
+		dataType                      		"inherited"
+		fixptType {
+			bias    		0
+			slope   		1
+			exponent		0
+			baseType		SF_INT16_TYPE
+			lock    		0
+		}
+		dlgFixptMode                  		0
+		props {
+			range {
+				minimum		""
+				maximum		""
+			}
+			array {
+				size      		"-1"
+				firstIndex		"1"
+			}
+		}
+	}
+
+	instance {
+		id     		15
+		name   		"background5/background5/Ráfaga/Training\n"
+					"Bits1"
+		machine		1
+		chart  		9
+	}
+
+	chart {
+		id                       		16
+		name                     		"background5/background5/Ráfaga/Training\n"
+					"Bits3"
+		windowPosition           		[296.813 314.45 200.25 189.75]
+		viewLimits               		[0 156.75 0 153.75]
+		screen                   		[1 1 1280 1024 1.333333333333333]
+		treeNode                 		[0 17 0 0]
+		firstTransition          		19
+		firstJunction            		18
+		viewObj                  		16
+		machine                  		1
+		decomposition            		CLUSTER_CHART
+		type                     		EML_CHART
+		firstData                		20
+		chartFileNumber          		3
+		disableImplicitCasting   		1
+		eml {
+			name		"fcn"
+		}
+	}
+
+	state {
+		id                  		17
+		labelString         		"eML_blk_kernel()"
+		position            		[18 64.5 118 66]
+		fontSize            		12
+		chart               		16
+		treeNode            		[16 0 0 0]
+		superState          		SUBCHART
+		subviewer           		16
+		type                		FUNC_STATE
+		decomposition       		CLUSTER_STATE
+		eml {
+			isEML       		1
+			script      		"function y = fcn(u)\n"
+						"% This block supports an embeddable subset of the MATLAB la"
+						"nguage.\n"
+						"% See the help menu for details. \n"
+						"\n"
+						"training3 = [0,1,0,0,0,0,1,1,1,0,1,1,1,0,1,0,0,1,0,0,0,0,1,"
+						"1,1,0];\n"
+						"y = training3;"
+			editorLayout		"100 M4x1[189 104 952 658]"
+		}
+	}
+
+	junction {
+		id         		18
+		position   		[23.5747 49.5747 7]
+		chart      		16
+		linkNode   		[16 0 0]
+		subviewer  		16
+		type       		CONNECTIVE_JUNCTION
+	}
+
+	transition {
+		id             		19
+		labelString    		"{eML_blk_kernel();}"
+		labelPosition  		[32.125 19.875 102.544 14.964]
+		fontSize       		12
+		src {
+			intersection		[0 0 1 0 23.5747 14.625 0 0]
+		}
+		dst {
+			id          		18
+			intersection		[7 0 -1 -1 23.5747 42.5747 0 0]
+		}
+		midPoint       		[23.5747 24.9468]
+		chart          		16
+		linkNode       		[16 0 0]
+		dataLimits     		[21.175 25.975 14.625 42.575]
+		subviewer      		16
+		drawStyle      		SMART
+	}
+
+	data {
+		id                            		20
+		name                          		"u"
+		linkNode                      		[16 0 21]
+		scope                         		INPUT_DATA
+		machine                       		1
+		dataType                      		"inherited"
+		fixptType {
+			bias    		0
+			slope   		1
+			exponent		0
+			baseType		SF_INT16_TYPE
+			lock    		0
+		}
+		dlgFixptMode                  		0
+		props {
+			range {
+				minimum		""
+				maximum		""
+			}
+			array {
+				size      		"-1"
+			}
+		}
+	}
+
+	data {
+		id                            		21
+		name                          		"y"
+		linkNode                      		[16 20 0]
+		scope                         		OUTPUT_DATA
+		machine                       		1
+		dataType                      		"inherited"
+		fixptType {
+			bias    		0
+			slope   		1
+			exponent		0
+			baseType		SF_INT16_TYPE
+			lock    		0
+		}
+		dlgFixptMode                  		0
+		props {
+			range {
+				minimum		""
+				maximum		""
+			}
+			array {
+				size      		"-1"
+				firstIndex		"1"
+			}
+		}
+	}
+
+	instance {
+		id     		22
+		name   		"background5/background5/Ráfaga/Training\n"
+					"Bits3"
+		machine		1
+		chart  		16
+	}
+
+	chart {
+		id                       		23
+		name                     		"background5/background5/Ráfaga/Training\n"
+					"Bits4"
+		windowPosition           		[311.813 299.45 200.25 189.75]
+		viewLimits               		[0 156.75 0 153.75]
+		screen                   		[1 1 1280 1024 1.333333333333333]
+		treeNode                 		[0 24 0 0]
+		firstTransition          		26
+		firstJunction            		25
+		viewObj                  		23
+		machine                  		1
+		decomposition            		CLUSTER_CHART
+		type                     		EML_CHART
+		firstData                		27
+		chartFileNumber          		4
+		disableImplicitCasting   		1
+		eml {
+			name		"fcn"
+		}
+	}
+
+	state {
+		id                  		24
+		labelString         		"eML_blk_kernel()"
+		position            		[18 64.5 118 66]
+		fontSize            		12
+		chart               		23
+		treeNode            		[23 0 0 0]
+		superState          		SUBCHART
+		subviewer           		23
+		type                		FUNC_STATE
+		decomposition       		CLUSTER_STATE
+		eml {
+			isEML       		1
+			script      		"function y = fcn(u)\n"
+						"% This block supports an embeddable subset of the MATLAB la"
+						"nguage.\n"
+						"% See the help menu for details. \n"
+						"\n"
+						"training4 = [0,1,0,0,0,1,1,1,1,0,1,1,0,1,0,0,0,1,0,0,0,1,1,"
+						"1,1,0];\n"
+						"y = training4;"
+			editorLayout		"100 M4x1[189 104 952 658]"
+		}
+	}
+
+	junction {
+		id         		25
+		position   		[23.5747 49.5747 7]
+		chart      		23
+		linkNode   		[23 0 0]
+		subviewer  		23
+		type       		CONNECTIVE_JUNCTION
+	}
+
+	transition {
+		id             		26
+		labelString    		"{eML_blk_kernel();}"
+		labelPosition  		[32.125 19.875 102.544 14.964]
+		fontSize       		12
+		src {
+			intersection		[0 0 1 0 23.5747 14.625 0 0]
+		}
+		dst {
+			id          		25
+			intersection		[7 0 -1 -1 23.5747 42.5747 0 0]
+		}
+		midPoint       		[23.5747 24.9468]
+		chart          		23
+		linkNode       		[23 0 0]
+		dataLimits     		[21.175 25.975 14.625 42.575]
+		subviewer      		23
+		drawStyle      		SMART
+	}
+
+	data {
+		id                            		27
+		name                          		"u"
+		linkNode                      		[23 0 28]
+		scope                         		INPUT_DATA
+		machine                       		1
+		dataType                      		"inherited"
+		fixptType {
+			bias    		0
+			slope   		1
+			exponent		0
+			baseType		SF_INT16_TYPE
+			lock    		0
+		}
+		dlgFixptMode                  		0
+		props {
+			range {
+				minimum		""
+				maximum		""
+			}
+			array {
+				size      		"-1"
+			}
+		}
+	}
+
+	data {
+		id                            		28
+		name                          		"y"
+		linkNode                      		[23 27 0]
+		scope                         		OUTPUT_DATA
+		machine                       		1
+		dataType                      		"inherited"
+		fixptType {
+			bias    		0
+			slope   		1
+			exponent		0
+			baseType		SF_INT16_TYPE
+			lock    		0
+		}
+		dlgFixptMode                  		0
+		props {
+			range {
+				minimum		""
+				maximum		""
+			}
+			array {
+				size      		"-1"
+				firstIndex		"1"
+			}
+		}
+	}
+
+	instance {
+		id     		29
+		name   		"background5/background5/Ráfaga/Training\n"
+					"Bits4"
+		machine		1
+		chart  		23
+	}
+
+	target {
+		id               		30
+		name             		"sfun"
+		description      		"Default Simulink S-Function Target."
+		machine          		1
+		linkNode         		[1 0 0]
+	}
+}

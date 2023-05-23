@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Sim>
+  <Topology>
+    <Name>Base Station.bsn</Name>
+    <Data>W0dlbmVyYWxdDQpOdW1iZXJPZlJvdXRlcnM9MA0KTnVtYmVyT2ZTd2l0Y2hlcz0wDQpOdW1iZXJPZlBDcz0wDQpOdW1iZXJPZkNvbm5lY3RvcnM9MA0KVmVyc2lvbj04LjANCg0K</Data>
+    <Size>102</Size>
+    <Type>Topology</Type>
+    <Ordinal>0</Ordinal>
+  </Topology>
+  <Nwc />
+  <Rtrs />
+  <IsDBLab>False</IsDBLab>
+  <DBLabID>00000000-0000-0000-0000-000000000000</DBLabID>
+  <LabPage>0</LabPage>
+</Sim>
